@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: nali结合zsh函数 让ping和dig显示地理信息
-    date: 2022-02-28 20:43:00
-    updated: 2022-02-28 20:47:00
-    abbrlink: 15947462
     tags:
     categories:
     ---

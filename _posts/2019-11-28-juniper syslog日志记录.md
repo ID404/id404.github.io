@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: juniper syslog日志记录
-    date: 2019-11-28 09:52:00
-    updated: 2019-11-28 09:52:00
-    abbrlink: 11947081
     tags:
     categories:
     ---

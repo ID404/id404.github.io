@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: juniper srx 动态VPN配置 密码认证 radius认证 AD域认证
-    date: 2017-05-12 00:22:00
-    updated: 2017-05-12 17:52:00
-    abbrlink: 6843551
     tags:
     categories:
     ---

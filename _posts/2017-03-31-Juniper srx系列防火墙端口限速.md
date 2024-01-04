@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: Juniper srx系列防火墙端口限速
-    date: 2017-03-31 22:52:00
-    updated: 2017-03-31 22:52:00
-    abbrlink: 6653960
     tags:
     categories:
     ---

@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: Palo Alto防火墙GlobalProtect配置
-    date: 2023-06-08 10:18:00
-    updated: 2023-06-21 16:42:00
-    abbrlink: 17465413
     tags:
     categories:
     ---

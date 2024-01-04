@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: 信锐通过webagent 获取IP地址
-    date: 2020-07-27 22:30:00
-    updated: 2020-07-27 22:30:00
-    abbrlink: 13388112
     tags:
     categories:
     ---

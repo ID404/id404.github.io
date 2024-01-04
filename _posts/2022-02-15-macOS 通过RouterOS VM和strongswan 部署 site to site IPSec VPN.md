@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: macOS 通过RouterOS VM和strongswan 部署 site to site IPSec VPN
-    date: 2022-02-15 14:21:00
-    updated: 2022-02-28 20:48:00
-    abbrlink: 15877921
     tags:
     categories:
     ---

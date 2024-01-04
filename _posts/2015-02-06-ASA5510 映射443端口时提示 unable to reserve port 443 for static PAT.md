@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: ASA5510 映射443端口时提示 unable to reserve port 443 for static PAT
-    date: 2015-02-06 10:32:00
-    updated: 2015-03-03 22:44:00
-    abbrlink: 4306889
     tags:
     categories:
     ---
@@ -30,7 +28,7 @@ ASA(config-webvpn)#port 65010
 <p>以下为cisco 官方资料：<br />
 <a title="http://www.cisco.com/c/en/us/support/docs/security/asa-5500-x-series-next-generation-firewalls/64758-pix70-nat-pat.html" href="http://www.cisco.com/c/en/us/support/docs/security/asa-5500-x-series-next-generation-firewalls/64758-pix70-nat-pat.html" rel="nofollow">
 http://www.cisco.com/c/en/us/support/docs/security/asa-5500-x-series-next-generation-firewalls/64758-pix70-nat-pat.html</a></p>
-<p><img src="http://images.cnitblog.com/blog/725676/201503/011303151433210.jpg" alt="" /></p>
+<p><img src="/images/blog/011303151433210.jpg" alt="" /></p>
 <p>&nbsp;<br />
 <br />
 查看原文：<a href="http://imjc.tk/archives/589.html" rel="nofollow">http://imjc.tk/archives/589.html</a></p>

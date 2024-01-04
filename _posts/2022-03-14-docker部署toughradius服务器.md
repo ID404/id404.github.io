@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: docker部署toughradius服务器
-    date: 2022-03-14 14:27:00
-    updated: 2022-03-14 14:34:00
-    abbrlink: 16003934
     tags:
     categories:
     ---

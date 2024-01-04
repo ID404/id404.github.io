@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: No user specified nor available for SSH client
-    date: 2016-04-17 11:51:00
-    updated: 2016-04-17 11:51:00
-    abbrlink: 5400667
     tags:
     categories:
     ---

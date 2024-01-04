@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: juniper srx 更改默认ssh端口
-    date: 2016-10-04 18:16:00
-    updated: 2016-10-04 18:16:00
-    abbrlink: 5930855
     tags:
     categories:
     ---

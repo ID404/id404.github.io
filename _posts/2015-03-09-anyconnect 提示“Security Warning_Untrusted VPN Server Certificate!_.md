@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: anyconnect 提示“Security Warning:Untrusted VPN Server Certificate!"
-    date: 2015-03-09 13:58:00
-    updated: 2015-03-09 14:01:00
-    abbrlink: 4323426
     tags:
     categories:
     ---

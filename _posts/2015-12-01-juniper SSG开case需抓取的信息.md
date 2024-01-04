@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: juniper SSG开case需抓取的信息
-    date: 2015-12-01 10:33:00
-    updated: 2015-12-17 14:07:00
-    abbrlink: 5009358
     tags:
     categories:
     ---

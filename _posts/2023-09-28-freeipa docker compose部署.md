@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: freeipa docker compose部署
-    date: 2023-09-28 11:36:00
-    updated: 2023-09-28 11:36:00
-    abbrlink: 17735385
     tags:
     categories:
     ---

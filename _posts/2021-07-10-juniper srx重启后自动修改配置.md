@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: juniper srx重启后自动修改配置
-    date: 2021-07-10 19:26:00
-    updated: 2021-07-10 19:26:00
-    abbrlink: 14994625
     tags:
     categories:
     ---

@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: Juniper srx防火墙定时关机、重启并发送微信通知
-    date: 2021-07-10 18:55:00
-    updated: 2021-07-10 18:55:00
-    abbrlink: 14994457
     tags:
     categories:
     ---

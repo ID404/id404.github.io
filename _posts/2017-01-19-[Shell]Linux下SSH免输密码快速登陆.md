@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: [Shell]Linux下SSH免输密码快速登陆
-    date: 2017-01-19 14:05:00
-    updated: 2017-01-19 14:07:00
-    abbrlink: 6306400
     tags:
     categories:
     ---

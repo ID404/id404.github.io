@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: juniper srx pppoe断线重连
-    date: 2021-07-10 19:13:00
-    updated: 2021-07-10 19:13:00
-    abbrlink: 14994576
     tags:
     categories:
     ---

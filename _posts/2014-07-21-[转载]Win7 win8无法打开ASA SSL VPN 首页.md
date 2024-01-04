@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: [转载]Win7 win8无法打开ASA SSL VPN 首页
-    date: 2014-07-21 13:03:00
-    updated: 2015-03-01 13:01:00
-    abbrlink: 4306895
     tags:
     categories:
     ---
@@ -24,14 +22,14 @@ VPN 与 windows7 的兼容性实际案例。</p>
 <p>SSLVPN 客户端： Windows XP SP2 with IE6 ,Windows7 with IE8<br />
 SSL VPN 服务器端： ASA5500 8.x with 3DES license</p>
 <p>网络拓扑</p>
-<p><img src="http://images.cnitblog.com/blog/725676/201503/011300242213394.jpg" alt="" /></p>
+<p><img src="/images/blog/011300242213394.jpg" alt="" /></p>
 <p>问题描述</p>
 <p>客户反映Windows7 无法打开ASA SSL VPN 登陆页面 ，如图4.1 。 但WindowsXP
 一切正常，如图4.2。</p>
 <p>图4.1.</p>
-<p><img src="http://images.cnitblog.com/blog/725676/201503/011300443461680.jpg" alt="" /></p>
+<p><img src="/images/blog/011300443461680.jpg" alt="" /></p>
 <p>图4.2.</p>
-<p><img src="http://images.cnitblog.com/blog/725676/201503/011300527838000.jpg" alt="" /></p>
+<p><img src="/images/blog/011300527838000.jpg" alt="" /></p>
 <p>故障处理</p>
 <p>出现此类问题时，我建议用户首先收集log 文件来找到蛛丝马迹，这也是我们处理问题解决问题的很好的敲门砖。</p>
 <p>ciscoasa(config)#logging buffered debugging &ldquo; 将日志级别调成debugging

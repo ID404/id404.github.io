@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: 解决 WordPress“正在执行例行维护，请一分钟后回来”[转]
-    date: 2014-02-07 16:47:00
-    updated: 2015-03-02 23:00:00
-    abbrlink: 4306901
     tags:
     categories:
     ---

@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: Powershell 实现telnet 服务端
-    date: 2023-11-11 23:25:00
-    updated: 2023-11-13 09:41:00
-    abbrlink: 17826581
     tags:
     categories:
     ---

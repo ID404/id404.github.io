@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: Juniper SRX防火墙U盘启动及硬盘故障恢复
-    date: 2022-01-18 11:55:00
-    updated: 2022-02-28 20:48:00
-    abbrlink: 15816901
     tags:
     categories:
     ---

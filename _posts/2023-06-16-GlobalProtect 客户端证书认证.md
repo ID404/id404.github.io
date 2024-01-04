@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: GlobalProtect 客户端证书认证
-    date: 2023-06-16 18:50:00
-    updated: 2023-06-19 11:19:00
-    abbrlink: 17485517
     tags:
     categories:
     ---

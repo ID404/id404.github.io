@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: freeradius对接ldap配置
-    date: 2023-09-28 14:37:00
-    updated: 2023-09-28 14:39:00
-    abbrlink: 17735760
     tags:
     categories:
     ---

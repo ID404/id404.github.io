@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: shell深井冰之linux命令行下使用豆瓣FM
-    date: 2014-12-27 22:03:00
-    updated: 2015-03-03 22:45:00
-    abbrlink: 4306891
     tags:
     categories:
     ---
@@ -24,7 +22,7 @@ https://github.com/taizilongxu/douban.fm/archive/master.zip下载文件<br />
 <p>同时发现原来setup.py文件要先编译再安装-_-b<br />
 先编译 python setup.py build<br />
 安装python setup.py install</p>
-<p>安装完后直接输入douban.fm就可以用命令行听豆瓣了<br /><img src="http://images.cnitblog.com/blog/725676/201503/011310145807768.jpg" alt="" /><br />
+<p>安装完后直接输入douban.fm就可以用命令行听豆瓣了<br /><img src="/images/blog/011310145807768.jpg" alt="" /><br />
 <br />
 <br />
 查看原文：<a href="http://imjc.tk/archives/575.html" rel="nofollow">http://imjc.tk/archives/575.html</a></p>

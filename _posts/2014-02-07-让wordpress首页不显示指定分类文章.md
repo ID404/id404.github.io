@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: 让wordpress首页不显示指定分类文章
-    date: 2014-02-07 15:03:00
-    updated: 2014-02-07 15:03:00
-    abbrlink: 4306905
     tags:
     categories:
     ---

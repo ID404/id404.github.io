@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: GlobalProtect配合privacyIDEA对接ldap做二步验证
-    date: 2023-06-28 15:50:00
-    updated: 2023-06-28 15:50:00
-    abbrlink: 17511628
     tags:
     categories:
     ---

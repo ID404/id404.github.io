@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: juniper模拟器使用设置 virtualbox
-    date: 2015-10-07 22:08:00
-    updated: 2015-10-09 22:23:00
-    abbrlink: 4859642
     tags:
     categories:
     ---

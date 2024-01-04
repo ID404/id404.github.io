@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: linux清空linux 和history
-    date: 2016-05-02 21:53:00
-    updated: 2016-05-02 21:56:00
-    abbrlink: 5453255
     tags:
     categories:
     ---

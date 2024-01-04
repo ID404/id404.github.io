@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: 利用nginx反向代理功能将http网站改造成https
-    date: 2023-05-30 20:54:00
-    updated: 2023-05-30 20:54:00
-    abbrlink: 17444461
     tags:
     categories:
     ---

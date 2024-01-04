@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: 通过shell脚本更新DNSPOD域名
-    date: 2023-03-23 14:21:00
-    updated: 2023-03-23 14:21:00
-    abbrlink: 17247328
     tags:
     categories:
     ---

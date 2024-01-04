@@ -1,8 +1,6 @@
 ---
+    layout: post
     title: Juniper Secure Connect 配置脚本
-    date: 2022-01-16 19:01:00
-    updated: 2022-03-08 12:22:00
-    abbrlink: 15810936
     tags:
     categories:
     ---
