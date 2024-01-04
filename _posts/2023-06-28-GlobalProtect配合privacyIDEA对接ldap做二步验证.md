@@ -1,9 +1,9 @@
 ---
 layout: post
 title: GlobalProtect配合privacyIDEA对接ldap做二步验证
-keywords:
-description:
-categories:
+keywords: Globalprotect, privacyIDEA
+description: GlobalProtect配合privacyIDEA对接ldap做二步验证
+categories: PaloAlto
 ---
 <p>#Author https://cnblogs.com/id404</p>
 <p>GlobalProtect的和privacyIDEA的安装部署及基础设置可参考前一篇博文</p>

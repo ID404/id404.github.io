@@ -6,8 +6,8 @@ description: GlobalProtect配合privacyIDEA做邮箱或TOTP二步验证
 keywords: Palo Alto, Global Protect, TOTP
 ---
 
-    <p>#Author https://cnblogs.com/id404</p>
-<p>本文重点在privacyIDEA的配置上，GlobalProtect只需将认证服务器设置为radius和勾选二步认证的选项。</p>
+本文重点在privacyIDEA的配置上，GlobalProtect只需将认证服务器设置为radius和勾选二步认证的选项。
+
 <h1>一、privacyIDEA安装</h1>
 <p>privacyIDEA作为radius服务器存储用户信息，并进行邮箱二步验证。GlobalProtect对接外部radius服务器为privacyIDEA</p>
 <p>当GlobalProtect用户登陆时，PA向privacyIDEA读取用户账号密码信息并进行验证，邮件发送验证码至用户的邮箱，验证通过后用户上线</p>

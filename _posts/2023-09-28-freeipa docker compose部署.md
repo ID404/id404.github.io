@@ -1,9 +1,9 @@
 ---
 layout: post
 title: freeipa docker compose部署
-keywords:
-description:
-categories:
+keywords: freeipa, docker
+description: freeipa docker compose部署
+categories: linux
 ---
 <p>docker compose文件</p>
 <div class="cnblogs_code">

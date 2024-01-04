@@ -1,13 +1,12 @@
 ---
 layout: post
 title: GlobalProtect 客户端证书认证
-keywords:
-description:
-categories:
+keywords: PaloAlto, Globalprotect
+description: GlobalProtect 客户端证书认证
+categories: PaloAlto
 ---
-<p>#Author https://cnblogs.com/id404</p>
-<p>&nbsp;</p>
-<h1>GlobalProtect 客户端证书认证</h1>
+
+## GlobalProtect 客户端证书认证
 <p>&nbsp;GlobalProtect的基本配置可参考博文 <a href="https://www.cnblogs.com/id404/p/17465413.html">https://www.cnblogs.com/id404/p/17465413.html</a>&nbsp; 本文不再叙述</p>
 <p>最终效果是客户端未安装客户端证书时无法登陆，每个客户端可安装各自证书</p>
 <p>&nbsp;</p>

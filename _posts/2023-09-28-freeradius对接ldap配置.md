@@ -1,9 +1,9 @@
 ---
 layout: post
 title: freeradius对接ldap配置
-keywords:
-description:
-categories:
+keywords: freeradius, ldap
+description: freeradius对接ldap配置
+categories: linux
 ---
 <p>1、安装freeradius</p>
 <div class="page" title="Page 1">

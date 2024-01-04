@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Palo Alto防火墙GlobalProtect配置
-keywords:
-description:
-categories:
+keywords: PaloAlto, GlobalProtect
+description: Palo Alto防火墙GlobalProtect配置
+categories: PaloAlto
 ---
 <p style="font-weight: 400;">&nbsp;#Author https://cnblogs.com/id404</p>
 <h1><strong>一、证书设置</strong><strong>&nbsp;</strong></h1>

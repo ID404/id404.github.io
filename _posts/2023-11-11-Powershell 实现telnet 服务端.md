@@ -1,12 +1,13 @@
 ---
 layout: post
 title: Powershell 实现telnet 服务端
-keywords:
-description:
-categories:
+keywords: powershell
+description: Powershell 实现telnet 服务端
+categories: windows
 ---
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+
+简单的telnet服务器用于检测端口状态
+
 <div class="cnblogs_code">
 <pre><span style="color: #0000ff;">Write-Host</span> <span style="color: #800000;">"</span><span style="color: #800000;">这是一个简单的 TCP 服务器，用于监听指定的端口，并接收来自客户端的数据。</span><span style="color: #800000;">"</span>
 <span style="color: #0000ff;">Write-Host</span> <span style="color: #800000;">"</span><span style="color: #800000;">客户端请使用telnet IP + 端口的方式连接至服务器</span><span style="color: #800000;">"</span>
