@@ -7,6 +7,42 @@ categories: juniper
 ---
 端口限速
 <img src="/images/blog/725676-20170331225122258-117962044.png" alt="" />
-<p>限制上传速度(应用到内网接口)<br />set firewall family inet filter upload-limit term 0 from source-address 192.168.0.16/32<br />set firewall family inet filter upload-limit term 0 then policer upload-1mb<br />set firewall family inet filter upload-limit term 0 then accept<br />set firewall family inet filter upload-limit term 1 from source-address 192.168.0.0/24<br />set firewall family inet filter upload-limit term 1 then policer upload-9mb<br />set firewall family inet filter upload-limit term 1 then accept<br />set firewall family inet filter upload-limit term 2 then accept   （其它网段不限速）<br />set firewall policer upload-1mb if-exceeding bandwidth-limit 1m<br />set firewall policer upload-1mb if-exceeding burst-size-limit 625k<br />set firewall policer upload-1mb then discard<br />set firewall policer upload-9mb if-exceeding bandwidth-limit 3m<br />set firewall policer upload-9mb if-exceeding burst-size-limit 625k<br />set firewall policer upload-9mb then discard <br />应用到内网接口<br />set interfaces vlan unit 100 family inet filter input upload-limit</p>
-<p>限制下载速度（应用到内网接口）<br />set firewall family inet filter download-limit term 0 from destination-address 192.168.0.222/32<br />set firewall family inet filter download-limit term 0 then policer download-1mb<br />set firewall family inet filter download-limit term 0 then accept<br />set firewall family inet filter download-limit term 1 from destination-address 192.168.0.0/24<br />set firewall family inet filter download-limit term 1 then policer download-9mb<br />set firewall family inet filter download-limit term 1 then accept<br />set firewall family inet filter download-limit term 2 then accept   （其它网段不限速）<br />set firewall policer download-1mb if-exceeding bandwidth-limit 1m<br />set firewall policer download-1mb if-exceeding burst-size-limit 625k<br />set firewall policer download-1mb then discard<br />set firewall policer download-9mb if-exceeding bandwidth-limit 3m<br />set firewall policer download-9mb if-exceeding burst-size-limit 625k<br />set firewall policer download-9mb then discard <br />应用到内网接口<br />set interfaces vlan unit 100 family inet filter output download-limit</p>
+
+限制上传速度(应用到内网接口)
+
+	set firewall family inet filter upload-limit term 0 from source-address 192.168.0.16/32
+	set firewall family inet filter upload-limit term 0 then policer upload-1mb
+	set firewall family inet filter upload-limit term 0 then accept
+	set firewall family inet filter upload-limit term 1 from source-address 192.168.0.0/24
+	set firewall family inet filter upload-limit term 1 then policer upload-9mb
+	set firewall family inet filter upload-limit term 1 then accept
+	set firewall family inet filter upload-limit term 2 then accept （其它网段不限速）
+	set firewall policer upload-1mb if-exceeding bandwidth-limit 1m
+	set firewall policer upload-1mb if-exceeding burst-size-limit 625k
+	set firewall policer upload-1mb then discard
+	set firewall policer upload-9mb if-exceeding bandwidth-limit 3m
+	set firewall policer upload-9mb if-exceeding burst-size-limit 625k
+	set firewall policer upload-9mb then discard 
+应用到内网接口
+
+	set interfaces vlan unit 100 family inet filter input upload-limit
+
+限制下载速度（应用到内网接口）
+
+	set firewall family inet filter download-limit term 0 from destination-address 192.168.0.222/32
+	set firewall family inet filter download-limit term 0 then policer download-1mb
+	set firewall family inet filter download-limit term 0 then accept
+	set firewall family inet filter download-limit term 1 from destination-address 192.168.0.0/24
+	set firewall family inet filter download-limit term 1 then policer download-9mb
+	set firewall family inet filter download-limit term 1 then accept
+	set firewall family inet filter download-limit term 2 then accept （其它网段不限速）
+	set firewall policer download-1mb if-exceeding bandwidth-limit 1m
+	set firewall policer download-1mb if-exceeding burst-size-limit 625k
+	set firewall policer download-1mb then discard
+	set firewall policer download-9mb if-exceeding bandwidth-limit 3m
+	set firewall policer download-9mb if-exceeding burst-size-limit 625k
+	set firewall policer download-9mb then discard 
+应用到内网接口
+
+	set interfaces vlan unit 100 family inet filter output download-limit
     

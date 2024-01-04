@@ -7,83 +7,82 @@ categories: linux
 ---
 在linux下可以通过ssh 连接远端设备时需要手动输入用户名和密码，免输入用户可以直接通过ssh -l Username 方式实现，但要做免输入密码使用ssh命令无法实现，此时需要用到expect。
 
-<p>分别构建两个脚本，一个fssh 一个my.exp</p>
-<p>my.exp实现ssh免输密码登陆，fssh记录用户名、密码、ip地址等信息。</p>
-<p>分别将两个脚本放到/usr/bin目录下，并增加执行权限。</p>
-<p>通过执行命令fssh XX 即可登陆到对应的远端设备</p>
-<p>&nbsp;</p>
-<p>Fssh 脚本</p>
-<div class="cnblogs_code">
-<pre>#!/bin/<span style="color: #0000ff;">sh</span><span style="color: #000000;">
-store1(){
-User</span>=<span style="color: #000000;">admin
-Passwd</span>=<span style="color: #000000;">admin
-IPaddr</span>=<span style="color: #800080;">1.1</span>.<span style="color: #800080;">1.1</span>
-/usr/bin/<span style="color: #000000;">my.exp $User $Passwd $IPaddr
-}
+分别构建两个脚本，一个fssh 一个my.exp
 
-store2(){
-User</span>=<span style="color: #000000;">admin
-Passwd</span>=<span style="color: #000000;">admin
-IPaddr</span>=<span style="color: #800080;">2.2</span>.<span style="color: #800080;">2.2</span>
-/usr/bin/<span style="color: #000000;">my.exp $User $Passwd $IPaddr
-}
+my.exp实现ssh免输密码登陆，fssh记录用户名、密码、ip地址等信息。
 
-bhc(){
-User</span>=<span style="color: #000000;">admin
-Passwd</span>=<span style="color: #000000;">admin
-IPaddr</span>=<span style="color: #800080;">3.3</span>.<span style="color: #800080;">3.3</span>
-/usr/bin/<span style="color: #000000;">my.exp $User $Passwd $IPaddr
-}
+分别将两个脚本放到/usr/bin目录下，并增加执行权限。
 
-store4(){
-User</span>=<span style="color: #000000;">store4
-Passwd</span>=<span style="color: #000000;">admin
-IPaddr</span>=<span style="color: #800080;">4.4</span>.<span style="color: #800080;">4.4</span>
-/usr/bin/<span style="color: #000000;">my.exp $User $Passwd $IPaddr
-}
+通过执行命令fssh XX 即可登陆到对应的远端设备
 
+Fssh 脚本:
 
-asa5510(){
-User</span>=<span style="color: #000000;">store4
-Passwd</span>=<span style="color: #000000;">admin
-IPaddr</span>=<span style="color: #800080;">5.5</span>.<span style="color: #800080;">5.5</span>
-/usr/bin/<span style="color: #000000;">my.exp $User $Passwd $IPaddr
-}
-
-
-</span><span style="color: #0000ff;">if</span> [ $<span style="color: #800080;">1</span> = <span style="color: #800000;">"</span><span style="color: #800000;">store1</span><span style="color: #800000;">"</span> ];<span style="color: #0000ff;">then</span><span style="color: #000000;">
-store1
-</span><span style="color: #0000ff;">elif</span> [ $<span style="color: #800080;">1</span> = <span style="color: #800000;">"</span><span style="color: #800000;">store4</span><span style="color: #800000;">"</span> ];<span style="color: #0000ff;">then</span><span style="color: #000000;">
-store4
-</span><span style="color: #0000ff;">elif</span> [ $<span style="color: #800080;">1</span> = <span style="color: #800000;">"</span><span style="color: #800000;">store2</span><span style="color: #800000;">"</span> ];<span style="color: #0000ff;">then</span><span style="color: #000000;">
-store2
-</span><span style="color: #0000ff;">elif</span> [ $<span style="color: #800080;">1</span> = <span style="color: #800000;">"</span><span style="color: #800000;">bhc</span><span style="color: #800000;">"</span> ];<span style="color: #0000ff;">then</span><span style="color: #000000;">
-bhc
-</span><span style="color: #0000ff;">elif</span> [ $<span style="color: #800080;">1</span> = <span style="color: #800000;">"</span><span style="color: #800000;">asa5510</span><span style="color: #800000;">"</span> ];<span style="color: #0000ff;">then</span><span style="color: #000000;">
-asa5510
-</span><span style="color: #0000ff;">else</span>
-<span style="color: #0000ff;">echo</span> <span style="color: #800000;">"</span><span style="color: #800000;">var error</span><span style="color: #800000;">"</span>
-<span style="color: #0000ff;">fi</span></pre>
-</div>
-<div class="cnblogs_Highlighter">
-<pre class="brush:bash;gutter:true;">　　</pre>
-</div>
+	#!/bin/sh
+	store1(){
+	User=admin
+	Passwd=admin
+	IPaddr=1.1.1.1
+	/usr/bin/my.exp $User $Passwd $IPaddr
+	}
+	
+	store2(){
+	User=admin
+	Passwd=admin
+	IPaddr=2.2.2.2
+	/usr/bin/my.exp $User $Passwd $IPaddr
+	}
+	
+	bhc(){
+	User=admin
+	Passwd=admin
+	IPaddr=3.3.3.3
+	/usr/bin/my.exp $User $Passwd $IPaddr
+	}
+	
+	store4(){
+	User=store4
+	Passwd=admin
+	IPaddr=4.4.4.4
+	/usr/bin/my.exp $User $Passwd $IPaddr
+	}
+	
+	
+	asa5510(){
+	User=store4
+	Passwd=admin
+	IPaddr=5.5.5.5
+	/usr/bin/my.exp $User $Passwd $IPaddr
+	}
+	
+	
+	if [ $1 = "store1" ];then
+	store1
+	elif [ $1 = "store4" ];then
+	store4
+	elif [ $1 = "store2" ];then
+	store2
+	elif [ $1 = "bhc" ];then
+	bhc
+	elif [ $1 = "asa5510" ];then
+	asa5510
+	else
+	echo "var error"
+	fi
+ 
+ 
 <p>expect 脚本：my.exp</p>
-<div class="cnblogs_code">
-<pre>#!/usr/bin/expect -<span style="color: #000000;">f
-
-set User [lindex $argv </span><span style="color: #800080;">0</span><span style="color: #000000;">]
-set Passwd [lindex $argv </span><span style="color: #800080;">1</span><span style="color: #000000;">]
-set IPadd [lindex $argv </span><span style="color: #800080;">2</span><span style="color: #000000;">]
-
-spawn </span><span style="color: #0000ff;">ssh</span><span style="color: #000000;"> $User@$IPadd
-expect {
-</span><span style="color: #800000;">"</span><span style="color: #800000;">*yes/no</span><span style="color: #800000;">"</span> { send <span style="color: #800000;">"</span><span style="color: #800000;">yes\r</span><span style="color: #800000;">"</span><span style="color: #000000;">;exp_continue }
-</span><span style="color: #800000;">"</span><span style="color: #800000;">*assword*</span><span style="color: #800000;">"</span> { send <span style="color: #800000;">"</span><span style="color: #800000;">$Passwd\r</span><span style="color: #800000;">"</span><span style="color: #000000;"> }
-}
-interact
-exit</span></pre>
-</div>
-<p>&nbsp;</p>
+	
+	#!/usr/bin/expect -f
+		
+	set User [lindex $argv 0]
+	set Passwd [lindex $argv 1]
+	set IPadd [lindex $argv 2]
+		
+	spawn ssh $User@$IPadd
+	expect {
+	"*yes/no" { send "yes\r";exp_continue }
+	"*assword*" { send "$Passwd\r" }
+	}
+	interact
+	exit
     

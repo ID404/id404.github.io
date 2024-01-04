@@ -9,58 +9,44 @@ keywords: Palo Alto, Global Protect, TOTP
 本文重点在privacyIDEA的配置上，GlobalProtect只需将认证服务器设置为radius和勾选二步认证的选项。
 
 # 一、privacyIDEA安装
-<p>privacyIDEA作为radius服务器存储用户信息，并进行邮箱二步验证。GlobalProtect对接外部radius服务器为privacyIDEA</p>
-<p>当GlobalProtect用户登陆时，PA向privacyIDEA读取用户账号密码信息并进行验证，邮件发送验证码至用户的邮箱，验证通过后用户上线</p>
-<p>&nbsp;</p>
+privacyIDEA作为radius服务器存储用户信息，并进行邮箱二步验证。GlobalProtect对接外部radius服务器为privacyIDEA
+
+当GlobalProtect用户登陆时，PA向privacyIDEA读取用户账号密码信息并进行验证，邮件发送验证码至用户的邮箱，验证通过后用户上线
 
 ## 1.1先安装好ubuntu 22.04.2 LTS
-<p>&nbsp;</p>
-<div class="style-scope ytd-watch-metadata">
-<div id="items" class="style-scope ytd-structured-description-content-renderer">
-<div class="cnblogs_code">
-<pre><span style="color: #000000;">#下载签名密钥
+	#下载签名密钥
 
-</span><span style="color: #0000ff;">wget</span> https:<span style="color: #008000;">//</span><span style="color: #008000;">lancelot.netknights.it/NetKnights-Release.asc</span>
-<span style="color: #000000;">
- 
-
-#确认指纹
-
-gpg </span>--import --import-options show-only --with-fingerprint NetKnights-<span style="color: #000000;">Release.asc
-
- 
-
-#添加签名密钥
-
-</span><span style="color: #0000ff;">mv</span> NetKnights-Release.asc /etc/apt/trusted.gpg.d/<span style="color: #000000;">
-
- 
-
-#添加仓库
-
-add</span>-apt-repository http:<span style="color: #008000;">//</span><span style="color: #008000;">lancelot.netknights.it/community/jammy/stable</span>
-<span style="color: #000000;">
- 
-
-#privacyIDEA安装
-
-privacyIDEA Installation: apt update </span>&amp;&amp; apt <span style="color: #0000ff;">install</span> privacyidea-apache2 privacyidea-radius -<span style="color: #000000;">y
-
- 
-
-#添加privacyIDEA web管理员
-
-pi</span>-manage admin add admin -<span style="color: #000000;">e admin@localhost
-
- 
-
-#添加 privacyIDEA 本地认证用户:
-
-</span>/opt/privacyidea<span style="color: #008000;">//</span><span style="color: #008000;">bin/privacyidea-create-pwidresolver-user -u ljc -i 10 -p 123456.com -d 'User LJC' &gt;&gt; /etc/privacyidea/privacyidea_user</span>
-<span style="color: #000000;">
-#其中ljc为用户名 </span><span style="color: #800080;">123456</span>.com为密码<br /><br /></pre>
-</div>
-<p>&nbsp;</p>
+	wget https://lancelot.netknights.it/NetKnights-Release.asc
+	
+	#确认指纹
+	
+	gpg --import --import-options show-only --with-fingerprint NetKnights-Release.asc
+	
+	#添加签名密钥
+	
+	mv NetKnights-Release.asc /etc/apt/trusted.gpg.d/
+		
+	#添加仓库
+	apt install software-properties-common -y
+	
+	add-apt-repository http://lancelot.netknights.it/community/jammy/stable
+		
+	
+	#privacyIDEA安装
+	
+	privacyIDEA Installation: apt update && apt install privacyidea-apache2 privacyidea-radius -y
+		 
+	
+	#添加privacyIDEA web管理员
+	
+	pi-manage admin add admin -e admin@localhost
+		 
+	
+	#添加 privacyIDEA 本地认证用户:
+	
+	/opt/privacyidea//bin/privacyidea-create-pwidresolver-user -u ljc -i 10 -p 123456.com -d 'User LJC' >> /etc/privacyidea/privacyidea_user
+	
+	#其中ljc为用户名 123456.com为密码
 
 ## 1.2 配置radius客户端
 <p>vi /etc/freeradius/3.0/clients.conf</p>
@@ -99,8 +85,8 @@ pi</span>-manage admin add admin -<span style="color: #000000;">e admin@localhos
 <p><img src="/images/blog/725676-20230616102259247-1668756456.png" /></p>
 <p>填写邮件服务器的相关信息，并保存。填写完毕可点击Send Test Email测试配置是否正确</p>
 <p><img src="/images/blog/725676-20230616102338736-324995956.png" /></p>
-<h2>&nbsp;</h2>
-<h2>2.5 设置用户邮件Email Token及超时时间</h2>
+
+## 2.5 设置用户邮件Email Token及超时时间
 <p>设置全局超时时间设备为10分钟&nbsp;</p>
 <p><img src="/images/blog/725676-20230616102650235-362625224.png" width="1016" height="444" /></p>
 <p>设置单个用户的邮箱</p>
