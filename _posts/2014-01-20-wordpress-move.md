@@ -1,13 +1,12 @@
 ---
-    title: wordpress  搬家
-    date: 2014-01-20 21:03:00
-    updated: 2014-01-20 21:03:00
-    abbrlink: 4306915
-    tags:
-    categories:
-    ---
-    <div><div><div id="sina_keyword_ad_area2"  class="articalContent   "  >
-			<p>网站原空间是放在3owl,由于最近经常提示带宽限制无法访问于是决定迁移空间.</P>
+layout: post
+title: wordpress  搬家
+categories: wordpress
+description: wordpress  搬家
+keywords: wordpress, 搬家
+---
+
+ 网站原空间是放在3owl,由于最近经常提示带宽限制无法访问于是决定迁移空间
 <p>以下为搬家过程:</P>
 <p>1.在3owl后台备份空间所有文件和数据库</P>
 <p>2.将备份的数据库和文件导入到新空间</P>

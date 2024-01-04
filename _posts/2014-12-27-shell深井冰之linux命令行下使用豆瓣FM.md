@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: shell深井冰之linux命令行下使用豆瓣FM
-    tags:
-    categories:
-    ---
-    <div>
+layout: post
+title: shell深井冰之linux命令行下使用豆瓣FM
+keywords:
+description:
+categories:
+---
+<div>
 <div>
 <div id="sina_keyword_ad_area2" class="articalContent   newfont_family">
 <p>一直关注之乎上一个问答：你电脑上跑着哪些好玩脚本？<br />

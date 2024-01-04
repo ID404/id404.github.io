@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: macOS 通过RouterOS VM和strongswan 部署 site to site IPSec VPN
-    tags:
-    categories:
-    ---
-    <h1>&nbsp;</h1>
+layout: post
+title: macOS 通过RouterOS VM和strongswan 部署 site to site IPSec VPN
+keywords:
+description:
+categories:
+---
+<h1>&nbsp;</h1>
 <p>由于需要远程接入客户的网络进行维护，但客户的出口设备没有sslvpn授权，无法通过sslvpn接入至客户网络。除了sslvpn外，还有其它方式可以接入客户网络进行维护：</p>
 <p>向日葵、teamviewer这种远程桌面方式就<a href="https://www.cnblogs.com/id404/" target="_blank">不说了</a></p>
 <p>最开始想到的方式是在出口网关做端口映射，将需要维护的资源映射出来。</p>

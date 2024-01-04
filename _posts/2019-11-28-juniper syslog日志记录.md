@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: juniper syslog日志记录
-    tags:
-    categories:
-    ---
-    <p>&nbsp;</p>
+layout: post
+title: juniper syslog日志记录
+keywords:
+description:
+categories:
+---
+<p>&nbsp;</p>
 <p>详细日志的关键字可以通过https://apps.juniper.net/syslog-explorer/查询</p>
 <p>查询日志可通过命令show log XXX显示 ，其中XXX为文件名</p>
 <p><br />set security log mode stream<br />set security log report</p>

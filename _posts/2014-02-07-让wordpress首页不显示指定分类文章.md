@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: 让wordpress首页不显示指定分类文章
-    tags:
-    categories:
-    ---
-    <div><div><div id="sina_keyword_ad_area2"  class="articalContent   "  >
+layout: post
+title: 让wordpress首页不显示指定分类文章
+keywords:
+description:
+categories:
+---
+<div><div><div id="sina_keyword_ad_area2"  class="articalContent   "  >
 			<p>本站有一个类微博的页面<a rel="nofollow" HREF="http://imjc.tk/?cat=2"  >http://imjc.tk/?cat=2</A>，这里主要记录本人平时乱七八糟的想法。由于以后这个页面会频繁更新，如果把更新的内容放的首页的话会显得首页过于混乱。在首页将这一分类屏蔽十分有必要。</P>
 <p>首先进入wordpress后台当前主题的编辑界面，找到index.php</P>
 <p>找到以下代码</P>

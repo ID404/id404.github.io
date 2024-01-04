@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: Palo Alto防火墙GlobalProtect配置
-    tags:
-    categories:
-    ---
-    <p style="font-weight: 400;">&nbsp;#Author https://cnblogs.com/id404</p>
+layout: post
+title: Palo Alto防火墙GlobalProtect配置
+keywords:
+description:
+categories:
+---
+<p style="font-weight: 400;">&nbsp;#Author https://cnblogs.com/id404</p>
 <h1><strong>一、证书设置</strong><strong>&nbsp;</strong></h1>
 <p><img src="/images/blog/725676-20230608170952866-1142163017.png" alt="" width="714" height="62" /></p>
 <p>&nbsp;</p>

@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: Juniper SRX防火墙U盘启动及硬盘故障恢复
-    tags:
-    categories:
-    ---
-    <p>Juniper SRX防火墙可以设置为U盘启动，当设备内置硬盘故障时可以临时用预先制作好的U盘启动</p>
+layout: post
+title: Juniper SRX防火墙U盘启动及硬盘故障恢复
+keywords:
+description:
+categories:
+---
+<p>Juniper SRX防火墙可以设置为U盘启动，当设备内置硬盘故障时可以临时用预先制作好的U盘启动</p>
 <p><a href="https://www.cnblogs.com/id404/" target="_blank">步骤如下</a>：</p>
 <p>1、从正常的设备上将系统镜像至U盘(或可以将做好的镜像文件写入至U盘)</p>
 <p>2、将U盘接至损坏的设备上，设置从U盘启动设备</p>

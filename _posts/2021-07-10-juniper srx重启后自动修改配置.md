@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: juniper srx重启后自动修改配置
-    tags:
-    categories:
-    ---
-    <p>在配置模式下通过命令run start shell 进入shell 模式</p>
+layout: post
+title: juniper srx重启后自动修改配置
+keywords:
+description:
+categories:
+---
+<p>在配置模式下通过命令run start shell 进入shell 模式</p>
 <div class="cnblogs_code">
 <pre>root@id404# run start shell
 root@id404%</pre>

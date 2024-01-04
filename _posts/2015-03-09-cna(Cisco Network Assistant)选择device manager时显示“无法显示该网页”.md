@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: cna(Cisco Network Assistant)选择device manager时显示“无法显示该网页”
-    tags:
-    categories:
-    ---
-    <p><img src="/images/blog/092215357306517.jpg" alt="" /></p>
+layout: post
+title: cna(Cisco Network Assistant)选择device manager时显示“无法显示该网页”
+keywords:
+description:
+categories:
+---
+<p><img src="/images/blog/092215357306517.jpg" alt="" /></p>
 <p><img src="/images/blog/092215556993717.jpg" alt="" /></p>
 <p>cna(Cisco Network Assistant)选择device manager时显示&ldquo;无法显示该网页&rdquo;&nbsp;</p>
 <p>只要将弹出的网址中.html前的_zh-CN删除即可</p>

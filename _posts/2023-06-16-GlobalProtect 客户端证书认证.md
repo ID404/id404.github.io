@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: GlobalProtect 客户端证书认证
-    tags:
-    categories:
-    ---
-    <p>#Author https://cnblogs.com/id404</p>
+layout: post
+title: GlobalProtect 客户端证书认证
+keywords:
+description:
+categories:
+---
+<p>#Author https://cnblogs.com/id404</p>
 <p>&nbsp;</p>
 <h1>GlobalProtect 客户端证书认证</h1>
 <p>&nbsp;GlobalProtect的基本配置可参考博文 <a href="https://www.cnblogs.com/id404/p/17465413.html">https://www.cnblogs.com/id404/p/17465413.html</a>&nbsp; 本文不再叙述</p>

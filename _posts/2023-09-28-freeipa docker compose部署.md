@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: freeipa docker compose部署
-    tags:
-    categories:
-    ---
-    <p>docker compose文件</p>
+layout: post
+title: freeipa docker compose部署
+keywords:
+description:
+categories:
+---
+<p>docker compose文件</p>
 <div class="cnblogs_code">
 <pre>version: <span style="color: #800000;">"</span><span style="color: #800000;">3.3</span><span style="color: #800000;">"</span><span style="color: #000000;">
 services:

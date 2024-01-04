@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: juniper SSG开case需抓取的信息
-    tags:
-    categories:
-    ---
-    <p>get tech-support</p>
+layout: post
+title: juniper SSG开case需抓取的信息
+keywords:
+description:
+categories:
+---
+<p>get tech-support</p>
 <p>get event</p>
 <p>get log sys</p>
 <p>get log sys saved</p>

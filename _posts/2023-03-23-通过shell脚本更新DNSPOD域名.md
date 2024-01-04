@@ -1,9 +1,12 @@
 ---
-    layout: post
-    title: 通过shell脚本更新DNSPOD域名
-    tags:
-    categories:
-    ---
+layout: post
+title: 通过shell脚本更新DNSPOD域名
+keywords: shell, dnspod
+description:
+categories: linux
+---
+
+通过shell脚本更新DNSPOD域名
     <p>&nbsp;</p>
 <p>&nbsp;</p>
 <div class="cnblogs_Highlighter">

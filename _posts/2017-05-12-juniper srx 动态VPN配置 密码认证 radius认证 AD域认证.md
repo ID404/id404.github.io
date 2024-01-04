@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: juniper srx 动态VPN配置 密码认证 radius认证 AD域认证
-    tags:
-    categories:
-    ---
-    <div class="cnblogs_Highlighter">&nbsp;</div>
+layout: post
+title: juniper srx 动态VPN配置 密码认证 radius认证 AD域认证
+keywords:
+description:
+categories:
+---
+<div class="cnblogs_Highlighter">&nbsp;</div>
 <p>　　</p>
 <p>juniper srx系列防火墙的动态VPN又叫dynamic vpn ,可以通过电脑客户端远程拨入到设备所在网络中.目前低端系列的防火墙如srx100 srx210 srx240 srx550 srx650设备默认支持两个动态VPN并发授权,超过两个授权需要开通相应的license .srx300系列需要高版本才能支持,前段时间测试过300系列15.1D49是不支持动态VPN的,好像需要升级到D51版本以上.</p>
 <p>&nbsp;</p>

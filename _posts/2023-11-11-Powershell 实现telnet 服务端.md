@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: Powershell 实现telnet 服务端
-    tags:
-    categories:
-    ---
-    <p>&nbsp;</p>
+layout: post
+title: Powershell 实现telnet 服务端
+keywords:
+description:
+categories:
+---
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <div class="cnblogs_code">
 <pre><span style="color: #0000ff;">Write-Host</span> <span style="color: #800000;">"</span><span style="color: #800000;">这是一个简单的 TCP 服务器，用于监听指定的端口，并接收来自客户端的数据。</span><span style="color: #800000;">"</span>

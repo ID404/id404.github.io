@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: Juniper Secure Connect 配置脚本
-    tags:
-    categories:
-    ---
-    <p>若要使用Juniper Secure Connect ,SRX的版本必须为20.3以上，20.3以下只能使用<a href="https://www.cnblogs.com/id404/" target="_blank">dynamic vpn</a>.&nbsp;</p>
+layout: post
+title: Juniper Secure Connect 配置脚本
+keywords:
+description:
+categories:
+---
+<p>若要使用Juniper Secure Connect ,SRX的版本必须为20.3以上，20.3以下只能使用<a href="https://www.cnblogs.com/id404/" target="_blank">dynamic vpn</a>.&nbsp;</p>
 <p>首先生成证书并引用</p>
 <div>
 <div class="cnblogs_Highlighter">

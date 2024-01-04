@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: 利用pydoc查看python模块文档
-    tags:
-    categories:
-    ---
-    <div>
+layout: post
+title: 利用pydoc查看python模块文档
+keywords:
+description:
+categories:
+---
+<div>
 <div>
 <div id="sina_keyword_ad_area2" class="articalContent   newfont_family">
 <p>1.首先配置环境变量：在Path后添加&ldquo;C:\Python27\Lib；&rdquo;<br />

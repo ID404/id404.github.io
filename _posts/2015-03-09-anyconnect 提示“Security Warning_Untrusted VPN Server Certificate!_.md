@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: anyconnect 提示“Security Warning:Untrusted VPN Server Certificate!"
-    tags:
-    categories:
-    ---
-    <p><img src="http://images.cnitblog.com/blog2015/725676/201503/091347476745285.jpg" alt="" /></p>
+layout: post
+title: anyconnect 提示“Security Warning:Untrusted VPN Server Certificate!"
+keywords:
+description:
+categories:
+---
+<p><img src="/images/blog/091347476745285.jpg" alt="" /></p>
 <p>出现此连接警告的原因是因为路由器上<span lang="EN-US">CA证书的<span lang="EN-US">subject-name的字段与路由器的<span lang="EN-US">IP地址不一致造成的。重装修改生成新的<span lang="EN-US">CA证书，然后连接<span lang="EN-US">VPN时勾选选项"always trust the vpn server and import the certifaction"后再次连接就不会再弹出该安全告警。</span></span></span></span></span></p>
 <p>&nbsp;</p>
 <p>show run 后找到以下信息：</p>

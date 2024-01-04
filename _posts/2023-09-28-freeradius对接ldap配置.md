@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: freeradius对接ldap配置
-    tags:
-    categories:
-    ---
-    <p>1、安装freeradius</p>
+layout: post
+title: freeradius对接ldap配置
+keywords:
+description:
+categories:
+---
+<p>1、安装freeradius</p>
 <div class="page" title="Page 1">
 <div class="layoutArea">
 <div class="column">

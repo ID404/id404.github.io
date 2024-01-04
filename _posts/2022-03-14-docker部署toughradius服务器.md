@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: docker部署toughradius服务器
-    tags:
-    categories:
-    ---
-    <p>#Author https://cnblogs.com/id404</p>
+layout: post
+title: docker部署toughradius服务器
+keywords:
+description:
+categories:
+---
+<p>#Author https://cnblogs.com/id404</p>
 <p>由于需要测试基本radius认证的wifi和pppoe拨号需要先搭建radius服务器，找了一圈开源的radius服务器，toughradius感觉比较适合</p>
 <p>toughradius主页&nbsp;<a title="https://www.toughradius.net" href="https://www.toughradius.net" target="_blank">https://www.toughradius.net</a>&nbsp; github地址：<a title="https://github.com/talkincode/ToughRADIUS" href="https://github.com/talkincode/ToughRADIUS" target="_blank">https://github.com/talkincode/ToughRADIUS</a></p>
 <p>首先安装好docker和docker compose</p>

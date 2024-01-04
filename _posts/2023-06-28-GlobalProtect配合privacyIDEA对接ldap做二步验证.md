@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: GlobalProtect配合privacyIDEA对接ldap做二步验证
-    tags:
-    categories:
-    ---
-    <p>#Author https://cnblogs.com/id404</p>
+layout: post
+title: GlobalProtect配合privacyIDEA对接ldap做二步验证
+keywords:
+description:
+categories:
+---
+<p>#Author https://cnblogs.com/id404</p>
 <p>GlobalProtect的和privacyIDEA的安装部署及基础设置可参考前一篇博文</p>
 <p><a href="https://www.cnblogs.com/id404/p/17484847.html">https://www.cnblogs.com/id404/p/17484847.html</a></p>
 <p>&nbsp;</p>

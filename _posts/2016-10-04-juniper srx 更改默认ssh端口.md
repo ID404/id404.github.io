@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: juniper srx 更改默认ssh端口
-    tags:
-    categories:
-    ---
-    <p>juniper srx系列防火墙默认ssh管理的端口是无法更改的，但要想使用其它端口实现ssh管理，可通过将外网的其它端口映射到环回接口的22端口实现</p>
+layout: post
+title: juniper srx 更改默认ssh端口
+keywords:
+description:
+categories:
+---
+<p>juniper srx系列防火墙默认ssh管理的端口是无法更改的，但要想使用其它端口实现ssh管理，可通过将外网的其它端口映射到环回接口的22端口实现</p>
 <p>思路：</p>
 <p>1.新建环回接口并配置IP地址</p>
 <p>2.将环回接口划入到loopback_zone 这个安全域，并在接口层面开放ssh管理</p>

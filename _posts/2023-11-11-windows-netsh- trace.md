@@ -1,13 +1,13 @@
 ---
-    title: windows自带工具netsh trace 抓包
-    date: 2023-11-11 11:43:00
-    updated: 2023-11-11 11:43:00
-    abbrlink: 17825743
-    tags:
-    categories:
-    ---
-    <p>&nbsp;</p>
-<p><strong>简单实例</strong></p>
+layout: post
+title: windows自带工具netsh trace 抓包
+ags:windows
+description:
+categories:windows
+---
+
+简单实例
+
 <p>&nbsp;</p>
 <p>管理员模式运行</p>
 <p>netsh trace start capture=yes report=disabled&nbsp; protocol=TCP ipv4.address=192.168.0.40 tracefile=d:\a.etl</p>

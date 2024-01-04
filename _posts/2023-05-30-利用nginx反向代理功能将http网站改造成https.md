@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: 利用nginx反向代理功能将http网站改造成https
-    tags:
-    categories:
-    ---
-    <p>内网服务器10.0.0.4使用web应用是http，由于各种原因无法在10.0.0.4上将http升级至https</p>
+layout: post
+ttitle: 利用nginx反向代理功能将http网站改造成https
+keywords:
+description:
+categories:
+---
+<p>内网服务器10.0.0.4使用web应用是http，由于各种原因无法在10.0.0.4上将http升级至https</p>
 <p>此时可以在另一台服务器10.0.0.3上部署nginx ,利用nginx的反向代理功能，将访问10.0.0.3的流量转发至10.0.0.4 同时将访问80端口的流量自动跳转至443</p>
 <p>当然也可以在10.0.0.4这台服务器上部署nginx，但nginx监听的端口不能和原来的应用一样，需要换一个端口</p>
 <p>&nbsp;</p>

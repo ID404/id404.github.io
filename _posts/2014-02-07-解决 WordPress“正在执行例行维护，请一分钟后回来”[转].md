@@ -1,10 +1,11 @@
 ---
-    layout: post
-    title: 解决 WordPress“正在执行例行维护，请一分钟后回来”[转]
-    tags:
-    categories:
-    ---
-    <div>
+layout: post
+title: 解决 WordPress“正在执行例行维护，请一分钟后回来”[转]
+keywords:
+description:
+categories:
+---
+<div>
 <div>
 <div id="sina_keyword_ad_area2" class="articalContent   ">
 <p>摘自：http://www.wpdaxue.com/briefly-unavailable-for-scheduled-maintenance.html</p>
