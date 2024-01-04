@@ -1,10 +1,12 @@
 ---
 layout: post
 title: ASA5510 映射443端口时提示 unable to reserve port 443 for static PAT
-keywords:
-description:
-categories:
+keywords: ASA
+description: ASA5510 映射443端口时提示 unable to reserve port 443 for static PAT
+categories: cisco
 ---
+ASA5510 映射443端口时提示 unable to reserve port 443 for static PAT
+
 <div id="sina_keyword_ad_area2" class="articalContent   newfont_family">
 <p><img src="/images/blog/011309205333080.png" alt="" /><br />
 ERROR: unable to reserve port 443 for static PAT<br />

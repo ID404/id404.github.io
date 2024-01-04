@@ -1,10 +1,12 @@
 ---
 layout: post
 title: 利用pydoc查看python模块文档
-keywords:
-description:
-categories:
+keywords: python
+description: 利用pydoc查看python模块文档
+categories: python
 ---
+利用pydoc查看python模块文档
+
 <div>
 <div>
 <div id="sina_keyword_ad_area2" class="articalContent   newfont_family">

@@ -1,11 +1,13 @@
 ---
 layout: post
 title: juniper模拟器使用设置 virtualbox
-keywords:
-description:
-categories:
+keywords: juniper
+description: juniper模拟器使用设置 virtualbox
+categories: juniper
 ---
-<p>最近学习juniper的防火墙，在网上找的模拟器。根据http://bbs.hh010.com/thread-377313-1-1.html的设置，但virtualbox启动时一直报错</p>
+
+最近学习juniper的防火墙，在网上找的模拟器。根据http://bbs.hh010.com/thread-377313-1-1.html的设置，但virtualbox启动时一直报错
+
 <div class="cnblogs_Highlighter">
 <pre class="brush:csharp;gutter:true;">NamedPipe#0 failed to connect to named pipe \\.\pipe\com_1 (VERR_FILE_NOT_FOUND).
 

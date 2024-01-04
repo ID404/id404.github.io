@@ -6,8 +6,9 @@ description: GlobalProtect 客户端证书认证
 categories: PaloAlto
 ---
 
-## GlobalProtect 客户端证书认证
-<p>&nbsp;GlobalProtect的基本配置可参考博文 <a href="https://www.cnblogs.com/id404/p/17465413.html">https://www.cnblogs.com/id404/p/17465413.html</a>&nbsp; 本文不再叙述</p>
+GlobalProtect 客户端证书认证
+
+GlobalProtect的基本配置可参考博文  https://www.cnblogs.com/id404/p/17465413.html  本文不再叙述
 <p>最终效果是客户端未安装客户端证书时无法登陆，每个客户端可安装各自证书</p>
 <p>&nbsp;</p>
 <p><img src="/images/blog/725676-20230616144119632-1475111007.png" width="205" height="308" /></p>
