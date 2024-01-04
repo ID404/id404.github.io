@@ -1,10 +1,12 @@
 ---
 layout: post
 title: shell深井冰之linux命令行下使用豆瓣FM
-keywords:
-description:
-categories:
+keywords: shell
+description: shell深井冰之linux命令行下使用豆瓣FM
+categories: python
 ---
+
+shell深井冰之linux命令行下使用豆瓣FM
 <div>
 <div>
 <div id="sina_keyword_ad_area2" class="articalContent   newfont_family">
