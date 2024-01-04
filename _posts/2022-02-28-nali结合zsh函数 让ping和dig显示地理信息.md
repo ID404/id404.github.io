@@ -1,11 +1,12 @@
 ---
 layout: post
 title: nali结合zsh函数 让ping和dig显示地理信息
-keywords:
-description:
-categories:
+keywords: nali
+description: nali结合zsh函数 让ping和dig显示地理信息
+categories: linux
 ---
-<p><a href="https://www.cnblogs.com/id404/" target="_blank">效果如下图所示&nbsp;</a></p>
+效果如下图所示
+
 <p><img src="/images/blog/725676-20220228203502422-1981016632.png" alt="" /></p>
 <p>&nbsp;</p>
 <p>要实现此效果，需要使用开源项目<a href="https://github.com/zu1k/nali" target="_blank">nali</a> &nbsp;</p>
