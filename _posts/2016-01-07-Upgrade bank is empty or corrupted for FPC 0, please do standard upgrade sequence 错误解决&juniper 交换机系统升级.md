@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Upgrade bank is empty or corrupted for FPC 0, please do standard upgrade sequence 错误解决&juniper 交换机系统升级
-keywords:
-description:
-categories:
+keywords: juniper, 交换机
+description: Upgrade bank is empty or corrupted for FPC 0, please do standard upgrade sequence 错误解决&juniper 交换机系统升级
+categories: juniper
 ---
 <p><span lang="zh-CN">解决juniper交换机&nbsp;<span lang="en-US">show system alarm <span lang="zh-CN">报<span lang="en-US">"<span lang="zh-CN">Upgrade bank is empty or corrupted for FPC 0, please do standard upgrade sequence<span lang="en-US">"<span lang="zh-CN">错误</span></span></span></span></span></span></span></p>
 <p>&nbsp;</p>

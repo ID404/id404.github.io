@@ -1,9 +1,12 @@
 ---
 layout: post
 title: linux清空linux 和history
-keywords:
-description:
-categories:
+keywords: linux, history
+description: linux清空linux 和history
+categories: linux
 ---
-<p>echo &gt; /var/log/wtmp;echo &gt; /var/log/btmp;history -c;echo &gt; ./.bash_history<br />&nbsp;</p>
+ echo > /var/log/wtmp;echo > /var/log/btmp;history -c;echo > ./.bash_history
+
+ 可设置定时任务，定时清空
+ 
     

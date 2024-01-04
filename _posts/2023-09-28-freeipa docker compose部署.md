@@ -5,7 +5,8 @@ keywords: freeipa, docker
 description: freeipa docker compose部署
 categories: linux
 ---
-<p>docker compose文件</p>
+docker compose文件
+
 <div class="cnblogs_code">
 <pre>version: <span style="color: #800000;">"</span><span style="color: #800000;">3.3</span><span style="color: #800000;">"</span><span style="color: #000000;">
 services:
