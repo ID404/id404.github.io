@@ -1,12 +1,12 @@
 ---
 layout: post
 title: juniper syslog日志记录
-keywords:
-description:
-categories:
+keywords: juniper, syslog
+description: juniper syslog日志记录
+categories: juniper
 ---
-<p>&nbsp;</p>
-<p>详细日志的关键字可以通过https://apps.juniper.net/syslog-explorer/查询</p>
+
+详细日志的关键字可以通过https://apps.juniper.net/syslog-explorer/查询
 <p>查询日志可通过命令show log XXX显示 ，其中XXX为文件名</p>
 <p><br />set security log mode stream<br />set security log report</p>
 <p><br />为了记录日志发生时间的准确性，建议首先设置好ntp服务器<br />set system ntp server cn.pool.ntp.org </p>

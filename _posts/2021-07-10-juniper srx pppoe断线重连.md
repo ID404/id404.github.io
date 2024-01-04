@@ -1,11 +1,13 @@
 ---
 layout: post
 title: juniper srx pppoe断线重连
-keywords:
-description:
-categories:
+keywords: juniper, srx, pppoe
+description: juniper srx pppoe断线重连
+categories: juniper
 ---
-<p>srx防火墙在配置pppoe拨号时可以增加auto-reconnect配置进行断线重连</p>
+
+srx防火墙在配置pppoe拨号时可以增加auto-reconnect配置进行断线重连
+
 <p>set interfaces pp0 unit 0 pppoe-options auto-reconnect 10</p>
 <p>&nbsp;</p>
 <p>同时也可以通过event-options监测pppoe接口，发现接口down后自动重连</p>

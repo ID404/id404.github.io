@@ -1,11 +1,13 @@
 ---
 layout: post
 title: 服务器管理器添加windows2016提示“ kerberos 身份验证错误 ”
-keywords:
-description:
-categories:
+keywords: windows, kerberos
+description: 服务器管理器添加windows2016提示“ kerberos 身份验证错误 ”
+categories: windows
 ---
-<p>服务器版本为windows2016数据中心版</p>
+
+服务器版本为windows2016数据中心版
+
 <p>客户端为win10</p>
 <p>服务管理器添加服务器时提示&ldquo; kerberos 身份验证错误 &rdquo;</p>
 <p>可以通过在服务器管理器上右键 远程桌面连接 远程连接到服务器</p>

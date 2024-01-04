@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Juniper srx防火墙定时关机、重启并发送微信通知
-keywords:
-description:
-categories:
+keywords: juniper, srx, 定时, 微信
+description: Juniper srx防火墙定时关机、重启并发送微信通知
+categories: juniper
 ---
+
+
 <h1><strong>方法一：使用event-options进行定时关机</strong></h1>
 <p>配置前先确定设备的时间是否准确，可通过命令检查</p>
 <p>run show system uptime</p>
