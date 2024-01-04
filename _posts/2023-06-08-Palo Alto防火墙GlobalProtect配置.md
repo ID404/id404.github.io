@@ -8,7 +8,7 @@ categories: PaloAlto
 
 GlobalProtect为Paloalto防火墙的sslvpn功能 
 
-<h1><strong>一、证书设置</strong><strong>&nbsp;</strong></h1>
+# 一、证书设置 
 <p><img src="/images/blog/725676-20230608170952866-1142163017.png" alt="" width="714" height="62" /></p>
 <p>&nbsp;</p>
 <p style="font-weight: 400;">1、生成rootCA证书</p>
@@ -40,7 +40,8 @@ GlobalProtect为Paloalto防火墙的sslvpn功能
 <p style="font-weight: 400;"><span style="text-decoration: line-through;">证书也可以直接选择根证书。如果外网域名的IP变动频繁或有多个IP ，SSL/TLS服务配置文件无法选择多个web证书，web证书上的IP和实际连接的IP不一样时会 出现 &ldquo;<span style="background-color: #ff0000;">无法验证网关服务器证书</span>&rdquo;的错误 。此时证书可直接选择根证书GP_rootCA &nbsp;(经验证MAC OS能正常登陆 ，windows无法正常登陆，建议建多个portal 和gateway)</span></p>
 <p>&nbsp;</p>
 <p style="font-weight: 400;">&nbsp;</p>
-<h1><strong>二、用户认证</strong></h1>
+
+# 二、用户认证 
 <p style="font-weight: 400;">1、新增本地用户</p>
 <p style="font-weight: 400;">输入用户名和密码</p>
 <p style="font-weight: 400;"><img src="/images/blog/725676-20230608100323073-1029489555.png" alt="" width="887" height="711" /></p>
@@ -53,13 +54,13 @@ GlobalProtect为Paloalto防火墙的sslvpn功能
 <p style="font-weight: 400;">&nbsp;</p>
 <p style="font-weight: 400;">&nbsp;</p>
 <p style="font-weight: 400;">&nbsp;</p>
-<h1><strong>三、配置隧道接口</strong></h1>
+
+# 三、配置隧道接口 
 <p style="font-weight: 400;"><img src="/images/blog/725676-20230608100430459-1283859150.png" alt="" width="855" height="550" /></p>
 <p><img src="/images/blog/725676-20230608100440180-2079642656.png" alt="" width="870" height="469" /></p>
 <p>注意此处的IP地址与客户端地址同网段，客户端的数据经隧道接口转发至内网</p>
-<h1>&nbsp;</h1>
-<h1><strong>&nbsp;</strong></h1>
-<h1><strong>四、配置</strong><strong>GlobalProtect</strong><strong>网关</strong></h1>
+
+# 四、配置GlobalProtect网关
 <p style="font-weight: 400;"><img src="/images/blog/725676-20230608100511809-314568099.png" alt="" width="858" height="533" /></p>
 <p style="font-weight: 400;">接口选择外网接口，IPv4地址选择外网的IP</p>
 <p style="font-weight: 400;">&nbsp;</p>
@@ -80,8 +81,9 @@ GlobalProtect为Paloalto防火墙的sslvpn功能
 <p style="font-weight: 400;">访问路由添加内网的路由，否则客户端无法访问内网资源</p>
 <p style="font-weight: 400;"><img src="/images/blog/725676-20230608101013894-1967279270.png" alt="" width="808" height="497" /></p>
 <p id="1686190215077">&nbsp;</p>
-<h1>&nbsp;</h1>
-<h1><strong>五、</strong><strong>配置</strong><strong>GlobalProtect Portal</strong></h1>
+
+
+#  五、 配置 GlobalProtect Portal 
 <p style="font-weight: 400;"><img src="/images/blog/725676-20230608101245960-536343623.png" alt="" width="842" height="460" /></p>
 <p><img src="/images/blog/725676-20230608101255421-1704231924.png" alt="" width="833" height="370" /></p>
 <p><img src="/images/blog/725676-20230608101304094-294188479.png" alt="" width="781" height="473" /></p>
@@ -98,7 +100,8 @@ GlobalProtect为Paloalto防火墙的sslvpn功能
 <p style="font-weight: 400;">&nbsp;</p>
 <p style="font-weight: 400;">&nbsp;</p>
 <p style="font-weight: 400;">&nbsp;</p>
-<h1><strong>六</strong><strong>、</strong><strong>修改</strong><strong>GlobalProtect</strong><strong>端口</strong></h1>
+
+# 六 修改 GlobalProtect 端口
 <p style="font-weight: 400;">GlobalProtect默认为443端口，若公网443端口被运营商封禁，需要将端口改为其它端口</p>
 <p style="font-weight: 400;">参考：</p>
 <p style="font-weight: 400;"><a href="https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClGKCA0"><span style="text-decoration: underline;">https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClGKCA0</span></a></p>
@@ -106,10 +109,12 @@ GlobalProtect为Paloalto防火墙的sslvpn功能
 <p style="font-weight: 400;">新建&nbsp;loopback口，将GlobalProtect&nbsp;网关和门户的接口改为loopback</p>
 <p style="font-weight: 400;">将外网接口的其它端口NAT至loopback的443端口</p>
 <p style="font-weight: 400;">&nbsp;</p>
-<h1><strong>七</strong><strong>、</strong><strong>NAT</strong><strong>及安全策略</strong></h1>
+
+# 七 NAT 及安全策略 
 <p style="font-weight: 400;">略</p>
 <p style="font-weight: 400;">&nbsp;</p>
-<h1><strong>八、客户端安装证书</strong></h1>
+
+# 八、客户端安装证书
 <p style="font-weight: 400;">若客户端没有安装证书，会提示无法验证网关的服务器证书</p>
 <p style="font-weight: 400;"><img src="/images/blog/725676-20230608101447875-253454032.png" alt="" width="502" height="782" /></p>
 <p><img src="/images/blog/725676-20230608101456935-297687627.png" alt="" width="280" height="367" /></p>
@@ -126,8 +131,9 @@ GlobalProtect为Paloalto防火墙的sslvpn功能
 <p style="font-weight: 400;"><img src="/images/blog/725676-20230608101612466-1003028408.png" alt="" width="803" height="613" /></p>
 <p id="1686190573870">&nbsp;</p>
 <p style="font-weight: 400;">&nbsp;</p>
-<h1><strong>&nbsp;</strong></h1>
-<h1><strong>九、客户端下载</strong></h1>
+
+
+# 九、客户端下载
 <p style="font-weight: 400;">方式1、确保有授权的情况下检查更新</p>
 <p style="font-weight: 400;"><img src="/images/blog/725676-20230608101634911-1372831673.png" alt="" width="866" height="583" /></p>
 <p id="1686190596233">&nbsp;</p>
@@ -141,9 +147,9 @@ GlobalProtect为Paloalto防火墙的sslvpn功能
 <p style="font-weight: 400;">其中GlobalProtect&nbsp;Agent Bundle可上传至设备，其它版本可直接安装至对应的系统中</p>
 <p style="font-weight: 400;"><img src="/images/blog/725676-20230608101750471-772020.png" alt="" width="823" height="759" /></p>
 <p id="1686190671709">&nbsp;</p>
-<h1><strong>&nbsp;</strong></h1>
-<h1><strong>&nbsp;</strong></h1>
-<h1><strong>十、退出</strong><strong>Glo</strong><strong>balProtect</strong><strong>客户端</strong></h1>
+ 
+
+# 十、退出GlobalProtect 客户端
 <p>&nbsp;</p>
 <p style="font-weight: 400;">&nbsp;</p>
 <p style="font-weight: 400;">GlobalProtect客户端没有退出选项</p>
@@ -230,12 +236,14 @@ case $# in
 
 esac</code></pre>
 <p style="font-weight: 400;">&nbsp;</p>
-<h1 style="font-weight: 400;">十一、证书过期&nbsp;</h1>
+
+# 十一、证书过期
 <p><img src="/images/blog/725676-20230611222958598-99168656.png" width="880" height="1152" /></p>
 <p>&nbsp;</p>
 <p>根证书续订后需要重新导入至客户端电脑</p>
 <p>&nbsp;</p>
-<h1>十二、其它问题&nbsp;</h1>
+
+# 十二、其它问题
 <h2>12.1 根证书自动安装</h2>
 <p>默认情况下客户端需要手动安装根证书，若希望客户端自动安装证书，可按如下设置</p>
 <p><img src="/images/blog/725676-20230621164125999-395050365.png" alt="" width="799" height="447" loading="lazy" /></p>

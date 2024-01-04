@@ -5,25 +5,37 @@ keywords: windows
 description: windows自带工具netsh trace 抓包
 categories: windows
 ---
-简单实例
+管理员模式运行
 
-<p>&nbsp;</p>
-<p>管理员模式运行</p>
-<p>netsh trace start capture=yes report=disabled&nbsp; protocol=TCP ipv4.address=192.168.0.40 tracefile=d:\a.etl</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>停止抓包</p>
-<p>netsh trace stop</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong>-------------------------------------------------------------</strong></p>
-<p><strong>其它可选参数</strong></p>
-<p>&nbsp;report=enabled 则还会额外输出系统的各类软硬件及系统诊断配置信息并打包为cab格式。disabled</p>
-<p><strong><em>persistent=yes </em>即使重启设备也会继续抓包，除非运行<em>netsh trace stop </em>。默认是<em>no</em></strong></p>
-<p><strong><em>fielmode=single|circular|append&nbsp; </em>默认为<em>circular</em></strong></p>
-<p><strong><em>maxsize&nbsp; </em>默认为<em>250MB</em>，如果不限制抓包文件大小需要设置<em>maxsize=0 </em>同时需要设置<em> filemode=single</em></strong></p>
-<p><strong><em>overwrite=yes|no </em>抓包文件是否覆盖原文件</strong></p>
-<p>correlation=yes： 不收集关联事件 默认yes</p>
+netsh trace start capture=yes report=disabled  protocol=TCP ipv4.address=192.168.0.40 tracefile=d:\a.etl
+
+ 
+
+ 
+
+停止抓包
+
+netsh trace stop
+
+ 
+
+ 
+
+-------------------------------------------------------------
+
+其它可选参数
+
+ report=enabled 则还会额外输出系统的各类软硬件及系统诊断配置信息并打包为cab格式。disabled
+
+persistent=yes 即使重启设备也会继续抓包，除非运行netsh trace stop 。默认是no
+
+fielmode=single|circular|append  默认为circular
+
+maxsize  默认为250MB，如果不限制抓包文件大小需要设置maxsize=0 同时需要设置 filemode=single
+
+overwrite=yes|no 抓包文件是否覆盖原文件
+
+correlation=yes： 不收集关联事件 默认yes
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>指定源地址</p>
