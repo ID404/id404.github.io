@@ -1,19 +1,22 @@
-- name: Software Engineer Keywords
+- name: 网络工程师
   keywords:
-      - Java
-      - C++
-      - Python
-      - Design Patterns
+      - cisco
+      - juniper
+      - Palo Alto
+      - 华为
+      - 华三
+      - 深信服
+      - 奇安信
 
-- name: Mobile Developer Keywords
-  keywords:
-      - Android
-      - Reverse Engineering
+#- name: Mobile Developer Keywords
+#  keywords:
+#      - Android
+#      - Reverse Engineering
 
-- name: Windows Developer Keywords
-  keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+#- name: Windows Developer Keywords
+#  keywords:
+#      - Win32 SDK
+#      - DuiLib
+#      - WTL
+#      - COM
+#      - WinDbg
