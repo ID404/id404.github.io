@@ -1,10 +1,11 @@
 ---
 layout: post
 title: [转载]Win7 win8无法打开ASA SSL VPN 首页
-keywords:
-description:
-categories:
+keywords: asa, sslvpn
+description: [转载]Win7 win8无法打开ASA SSL VPN 首页
+categories: cisco
 ---
+[转载]Win7 win8无法打开ASA SSL VPN 首页
 <div id="sina_keyword_ad_area2" class="articalContent   newfont_family">
 <p>转自<a title="http://www.china-ccie.com/doc/Win7-SSL-VPN/Win7-SSL-VPN_chs.html" href="http://www.china-ccie.com/doc/Win7-SSL-VPN/Win7-SSL-VPN_chs.html" rel="nofollow">http://www.china-ccie.com/doc/Win7-SSL-VPN/Win7-SSL-VPN_chs.html</a></p>
 <p>目录</p>
