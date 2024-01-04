@@ -41,7 +41,9 @@ GlobalProtect的基本配置可参考博文  https://www.cnblogs.com/id404/p/174
 <p><img src="/images/blog/725676-20230616145458415-2120992807.png" width="616" height="376" /></p>
 <p>&nbsp;</p>
 
-##4.2 证书安装
+
+## 4.2 证书安装
+
 <p>客户端双击打开后输入密码</p>
 <p>MAC：</p>
 <p><img src="/images/blog/725676-20230616145742191-537447436.png" width="614" height="253" /></p>
