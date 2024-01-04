@@ -2,7 +2,7 @@
 layout: post
 title: GlobalProtect配合privacyIDEA做邮箱或TOTP二步验证
 categories: PaloAlto
-description: 自学 Python 核心编程过程中对课后习题的答案记录。
+description: GlobalProtect配合privacyIDEA做邮箱或TOTP二步验证
 keywords: Palo Alto, Global Protect, TOTP
 ---
 
