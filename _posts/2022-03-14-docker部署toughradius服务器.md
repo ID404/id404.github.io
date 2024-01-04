@@ -7,7 +7,10 @@ categories: linux
 ---
 
 由于需要测试基本radius认证的wifi和pppoe拨号需要先搭建radius服务器，找了一圈开源的radius服务器，toughradius感觉比较适合
-<p>toughradius主页&nbsp;<a title="https://www.toughradius.net" href="https://www.toughradius.net" target="_blank">https://www.toughradius.net</a>&nbsp; github地址：<a title="https://github.com/talkincode/ToughRADIUS" href="https://github.com/talkincode/ToughRADIUS" target="_blank">https://github.com/talkincode/ToughRADIUS</a></p>
+
+toughradius主页 "https://www.toughradius.net" 
+github地址： https://github.com/talkincode/ToughRADIUS
+
 <p>首先安装好docker和docker compose</p>
 <p>&nbsp;</p>
 <p>新建好tradiusdata目录</p>

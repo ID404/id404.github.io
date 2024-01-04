@@ -1,11 +1,12 @@
 ---
 layout: post
-title: [Shell]Linux下SSH免输密码快速登陆
-keywords: linux, ssh,免密
-description: [Shell]Linux下SSH免输密码快速登陆
+title: Linux下SSH免输密码快速登陆
+keywords: linux, ssh, 免密
+description: Linux下SSH免输密码快速登陆
 categories: linux
 ---
 在linux下可以通过ssh 连接远端设备时需要手动输入用户名和密码，免输入用户可以直接通过ssh -l Username 方式实现，但要做免输入密码使用ssh命令无法实现，此时需要用到expect。
+
 <p>分别构建两个脚本，一个fssh 一个my.exp</p>
 <p>my.exp实现ssh免输密码登陆，fssh记录用户名、密码、ip地址等信息。</p>
 <p>分别将两个脚本放到/usr/bin目录下，并增加执行权限。</p>

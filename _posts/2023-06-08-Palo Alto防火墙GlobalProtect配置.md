@@ -5,7 +5,9 @@ keywords: PaloAlto, GlobalProtect
 description: Palo Alto防火墙GlobalProtect配置
 categories: PaloAlto
 ---
-<p style="font-weight: 400;">&nbsp;#Author https://cnblogs.com/id404</p>
+
+GlobalProtect为Paloalto防火墙的sslvpn功能 
+
 <h1><strong>一、证书设置</strong><strong>&nbsp;</strong></h1>
 <p><img src="/images/blog/725676-20230608170952866-1142163017.png" alt="" width="714" height="62" /></p>
 <p>&nbsp;</p>
