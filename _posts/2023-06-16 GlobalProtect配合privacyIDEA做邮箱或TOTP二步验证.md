@@ -1,11 +1,11 @@
 ---
 layout: post
 title: GlobalProtect配合privacyIDEA做邮箱或TOTP二步验证
-date: 2023-06-16 11:38:00
-updated: 2023-06-20 16:31:00
-keywords: Palo Alto, Global Protect, TOTP
 categories: PaloAlto
+description: 自学 Python 核心编程过程中对课后习题的答案记录。
+keywords: Palo Alto, Global Protect, TOTP
 ---
+
     <p>#Author https://cnblogs.com/id404</p>
 <p>本文重点在privacyIDEA的配置上，GlobalProtect只需将认证服务器设置为radius和勾选二步认证的选项。</p>
 <h1>一、privacyIDEA安装</h1>
