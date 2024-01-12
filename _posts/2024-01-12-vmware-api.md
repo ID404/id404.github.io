@@ -129,12 +129,12 @@ case $# in
 
       case $1 in
          start)
-            echo "power on vm: kpmg win11 test..."
+            echo "power on vm: win11 test..."
             curl -k -X POST "https://$vcenter_ip/rest/vcenter/vm/$vm_id/power/start" -H "vmware-api-session-id: $session_id"
             echo "Done!"
             ;;
          stop)
-            echo "power off vm kpmg win 11 test..."
+            echo "power off vm win 11 test..."
             curl -k -X POST "https://$vcenter_ip/rest/vcenter/vm/$vm_id/power/stop" -H "vmware-api-session-id: $session_id"
             echo "Done!"
             ;;
