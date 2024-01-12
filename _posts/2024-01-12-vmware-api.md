@@ -37,17 +37,7 @@ curl -s -k -X GET "https://<vcenter-ip>/rest/vcenter/vm" -H "vmware-api-session-
 
 输出的结果为json格式，不太方便看。
 ```
-{
-  "value": [
-    {
-      "memory_size_MiB": 4096,
-      "vm": "vm-5039",
-      "name": "vAF_8.0.6",
-      "power_state": "POWERED_OFF",
-      "cpu_count": 2
-    }
-    ]
-}
+{"value": [{"memory_size_MiB": 4096,"vm": "vm-5039","name": "vAF_8.0.6","power_state": "POWERED_OFF","cpu_count": 2} ]}
 ```
 
 
