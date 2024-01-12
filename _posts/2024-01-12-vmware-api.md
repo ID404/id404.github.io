@@ -11,7 +11,7 @@ categories: vmware
 详细的API接口文档可参考官方链接 :
 [vmware API](https://developer.vmware.com/apis/vsphere-automation/v7.0U2-deprecated/vcenter/vm/)
 
-#首先获取访问API接口的令牌
+# 首先获取访问API接口的令牌
 ```bash
 curl -s -k -X POST "https://<vcenter-ip>/rest/com/vmware/cis/session" -u <username>:<password> 
 ```
@@ -26,7 +26,7 @@ curl -s -k -X POST "https://<vcenter-ip>/rest/com/vmware/cis/session" -u <userna
 ```
 其中8d152bff9448d85ba377fab5d2712026 为令牌内容
 
-#通过令牌获取需要操作的vm的vm id
+# 通过令牌获取需要操作的vm的vm id
 ```bash
 curl -s -k -X GET "https://<vcenter-ip>/rest/vcenter/vm" -H "vmware-api-session-id: <your-session-id>"  | jq
 ```
@@ -99,13 +99,13 @@ curl -s -k -X POST "https://<vcenter-ip>/rest/vcenter/vm/<vm-id>/power/start" -H
 ```
 注意curl 的方法为 **POST**
 
-##执行关机操作
+## 执行关机操作
 ```
 curl -s -k -X POST "https://<vcenter-ip>/rest/vcenter/vm/<vm-id>/power/stop" -H "vmware-api-session-id: <your-session-id>" 
 ```
 注意curl 的方法为 **POST**
 
-#成果脚本
+# 成果脚本
 将以下代码保存为文件 vm-operator
 
 执行 bash vm-operator start 命令vm id 为vm-800的虚拟机自动开机
