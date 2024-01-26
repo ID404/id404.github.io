@@ -149,6 +149,8 @@ bash -c "$(curl -fsSLk https://waf-ce.chaitin.cn/release/latest/setup.sh)"
 
 ![WAF](/images/blog/20240126-WAF.png)
 
+我将linux主机的docker网络接口IP改为192.200.0.1，outline的http接口只暴露给192.200.0.1，长亭WAF上游直接填写映射出来的docker接口的端口，避免外部可以访问到http接口，现在从外部扫描这台服务器，只能扫描到https接口
+
 ## 4.3 通过nginx proxy manager改造为https
 略
 
