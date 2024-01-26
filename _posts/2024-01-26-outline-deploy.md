@@ -179,10 +179,103 @@ make restart
 ```
 
 ## 5.3 忘记重置密码
-* 将账号删除后重新添加
+* 方式一：将账号删除后重新添加
 		
-* 修改./data/uc/db/db.sqlite3 
+* 方式二：修改./data/uc/db/db.sqlite3 
+  
+   确保已经安装sqlite3命令行工具，
+   ```bash
+   sqlite3 db.sqlite3   
+   .tables
+   select * from auth_user;
+   UPDATE auth_user
+   SET password='pbkdf2_sha256$150000$cJFz2adCPeYA$nx0Jq2rqgnsqARE/HhJmym8vgyk+xGLzO9R0/f65hBY='
+   WHERE username='user1';
+   .quit
+   ```
+	此时用户user1的密码修改为123456.com
 
-	
 # 六、备份
+将/wiki目录下的所有数据打包并压缩放到/backup目录下，并删除大于14天的备份，同时将备份文件同步至NAS服务器
+
+
+
+```bash
+#!/bin/bash
+echo "----------------------------"
+# 设置要ping的IP地址
+
+backup_time=`date +%Y%m%d%H%M`
+IP_A="10.0.0.1"
+
+echo "开始执行脚本 $(date +%Y%m%d%H%M)"
+
+
+# 定义备份的源目录和目标路径
+SOURCE_DIR="/wiki"
+TARGET_DIR="/backup/wiki-backup-$backup_time.tar.gz"
+
+# 打包并压缩
+tar -czvf $TARGET_DIR $SOURCE_DIR
+
+# 输出结果
+echo "Backup $SOURCE_DIR to $TARGET_DIR completed!"
+
+echo "删除大于14天的备份"
+find /backup/ -type f -mtime +14 -delete
+
+
+# 检查IP地址A是否可以ping通
+ping -c 1 $IP_A > /dev/null
+if [ $? -eq 0 ]; then
+  echo "NAS可以ping通"
+else
+  echo "NAS无法ping通,退出程序"
+  exit 1
+fi
+
+
+# 如果两个IP地址都可以ping通  执行下一步操作
+echo "两个IP地址都可以ping通，开始检查备份目录挂载"
+
+mount -a
+sleep 10
+
+# 检查/backup目录是否存在
+if [ ! -d "/mnt/backup-wiki" ]; then
+  echo "/backup目录不存在,退出程序"
+  exit 1
+fi
+
+# 检查/backup目录是否为空
+if [ -z "$(ls -A /mnt/backup-wiki)" ]; then
+  echo "/backup目录为空,退出程序"
+  exit 1
+fi
+
+# 检查/backup目录是否为挂载点
+if ! mountpoint -q /mnt/backup-wiki; then
+  echo "/backup目录不是挂载点,退出程序"
+  exit 1
+fi
+
+echo "/backup目录已正确挂载,开始同步备份"
+
+
+rsync -avz --ignore-existing   --no-owner --no-perms --no-group --include 'wiki*'  /backup  /mnt/backup-wiki/
+
+
+
+echo "备份完成"
+
+echo "删除大于14天的备份"
+find /mnt/backup-wiki/ -type f -mtime +14 -delete
+
+
+#卸载备份目录
+umount /mnt/backup-wiki
+
+echo "备份操作完成 $(date +%Y%m%d%H%M)"
+echo " "
+```
 
