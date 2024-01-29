@@ -3,7 +3,7 @@ layout: post
 title: ocserv 配置
 keywords: ocserv
 description: 记录一些ocserv容易踩坑的配置
-categories: linux,ocserv
+categories: linux, ocserv
 ---
 
 记录一些ocserv容易踩坑的配置
