@@ -13,6 +13,7 @@ categories: outline
 
 # 一、keycloak OIDC部署
 1.创建keycloak文件夹，新建文件docker-compose.yaml 
+
 ```yaml
 services:
   keycloak-db:
@@ -66,7 +67,8 @@ networks:
     reverseproxy-nw:
         external: true
 ```
-替换docker-compose.yaml文件中域名www.test.cn自己的域名
+
+替换docker-compose.yaml文件中域名`www.test.cn`自己的域名
 
 执行`docker network create reverseproxy-nw` 创建docker 网络
 
@@ -103,6 +105,7 @@ networks:
 # 2、outline部署
 ## 配置修改
 * 创建outline文件夹，新建.env文件。 文件内容如下
+
 ```conf
 #secrets/passwords
 #Gen by 'openssl rand -hex 32`
@@ -161,15 +164,17 @@ SMTP_REPLY_EMAIL=
 SMTP_SECURE=
 ```
 
-替换www.test.cn域名为你自己的域名
+替换`www.test.cn`域名为你自己的域名
+
 * 修改.env文件中OIDC信息
   
   ![client-secret](/images/blog/202402/oidc-client-secret.png)
 
-  替换OIDC_CLIENT_SECRET 为1.1中生成的client Secret
+  替换`OIDC_CLIENT_SECRET` 为1.1中生成的client Secret
 
 ## 启动outline
 创建docker-compose.yaml文件，文件内容如下：
+
 ```yaml
 services:
   outline_redis:
@@ -224,7 +229,7 @@ networks:
     external: true
 ```
 
-执行 docker compose up -d 启动outline
+执行 `docker compose up -d` 启动outline
 
 # 三、遇到的问题
 ## 3.1用户修改密码
