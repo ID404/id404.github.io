@@ -102,7 +102,7 @@ networks:
 ![set-password](/images/blog/202402/set-password.png)
 
 
-# 2、outline部署
+# 二、outline部署
 ## 配置修改
 * 创建outline文件夹，新建.env文件。 文件内容如下
 
