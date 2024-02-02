@@ -3,7 +3,7 @@ layout: post
 title: outline wiki 部署
 keywords: outline, wiki
 description: 私有化部署outline wiki系统
-categories: linux
+categories: outline
 ---
 
 公司技术部门不同同事之间负责各自的客户，忙的时候经常需要帮其它同事处理客户的问题。此时新处理的同事并不熟悉客户的现状，口头或文档交接经常不全。于是萌生部署知识库系统的想法，用于在部门内容共享客户信息。
