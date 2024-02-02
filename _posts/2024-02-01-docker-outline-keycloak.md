@@ -68,13 +68,13 @@ networks:
         external: true
 ```
 
-替换docker-compose.yaml文件中域名`www.test.cn`自己的域名
+替换docker-compose.yaml文件中域名`wiki.test.cn`自己的域名
 
 执行`docker network create reverseproxy-nw` 创建docker 网络
 
 2.执行`docker compose up -d `运行keycloak
 
-3.登录`http://www.test.cn:4430/` ,进入administratoration Console
+3.登录`http://wiki.test.cn:4430/` ,进入administratoration Console
 ![admin console](/images/blog/202402/admin-console.png)
 
 ## 1.1 添加client
@@ -87,7 +87,7 @@ networks:
 
 ![create client3](/images/blog/202402/creata-client3.png)
 
-注意Valid redirect URIs 内容为`http://www.test.cn/auth/oidc.callback` 也可以写成`http://www.test.cn/*`
+注意Valid redirect URIs 内容为`http://wiki.test.cn/auth/oidc.callback` 也可以写成`http://wiki.test.cn/*`
 
 保存后进入outline 的Credentials 查看并记录下client Secret
 
@@ -164,7 +164,7 @@ SMTP_REPLY_EMAIL=
 SMTP_SECURE=
 ```
 
-替换`www.test.cn`域名为你自己的域名
+替换`wiki.test.cn`域名为你自己的域名
 
 * 修改.env文件中OIDC信息
   
@@ -233,7 +233,7 @@ networks:
 
 # 三、遇到的问题
 ## 3.1用户修改密码
-用户可自行可登录 [http://www.test.cn:4430/admin/outline/console](http://www.test.cn:4430/admin/outline/console) 修改
+用户可自行可登录 [http://wiki.test.cn:4430/admin/outline/console](http://wiki.test.cn:4430/admin/outline/console) 修改
 
 ## 3.2 用户管理界面点击Manage account 时提示failed to initialize keycloak
 分别在master、outline中 client\account-console  选项web origin输入+
