@@ -157,8 +157,8 @@ OIDC_CLIENT_SECRET=D8t8KFH6K127GCPW02PvAlbPc2Fo5zp4
 OIDC_AUTH_URI=http://wiki.test.cn:4430/realms/master/protocol/openid-connect/auth
 OIDC_TOKEN_URI=http://wiki.test.cn:4430/realms/master/protocol/openid-connect/token
 OIDC_USERINFO_URI=http://wiki.test.cn:4430/realms/master/protocol/openid-connect/userinfo
-OIDC_LOGOUT_URI=https://wiki.test.cn:4430/realms/master/protocol/openid-connect/logout?logout_redirect_uri=https%3A%2F%2Fwiki.test.cn%2F
-OIDC_DISABLE_REDIRECT=false
+OIDC_LOGOUT_URI=https://wiki.test.cn:4430/realms/master/protocol/openid-connect/logout?redirect_uri=https%3A%2F%2Fwiki.test.cn%2F
+OIDC_DISABLE_REDIRECT=true
 OIDC_DISPLAY_NAME=OpenID
 OIDC_USERNAME_CLAIM=preferred_username
 OIDC_SCOPES=openid profile email
@@ -254,6 +254,7 @@ networks:
 
 
 ## 3.3 退出outline及会话超时
+
 当退出outline后，重新登录不需要重新输入账号密码，这是由于退出outline退出信息没有同步至keycloak。用户信息在keycloak还是登录状态的所以不需要重新认证。这似乎是一个bug，在outline的Issuse两年前已经有人提及了但一直没有处理好，在Issuse中有人提及其实outline提供OIDC_LOGIN_LOGOUT_URI信息给OIDC服务器既可，但outline开发从员似乎一直没有处理。
 
 目前规避的方式是在keycloak中设置session timeout
@@ -261,3 +262,22 @@ networks:
 在keylocak管理控制台--realm setting--token--sso session idle 设置超时时间
 
 参考 [链接](https://github.com/outline/outline/discussions/3672)
+
+---
+
+
+2024-02-22更新
+
+昨天发现的outline 0.75.1版本新增支持OIDC_LOGOUT_URI参数
+
+在`.env`文件添加参数 `OIDC_LOGOUT_URI=https://wiki.test.cn:4430/realms/admin/protocol/openid-connect/logout?redirect_uri=https%3A%2F%2Fwiki.test.cn%2F`
+
+同时调整 keycloak 的docker compose文件，command部分添加参数`--spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true`
+
+修改后如下
+
+```
+command: start --spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true  --proxy edge  --hostname=wiki.test.cn --hostname-port=4430 --hostname-strict-backchannel=true --hostname-admin-url=https://wiki.test.cn:4430/
+```
+
+
