@@ -157,7 +157,7 @@ OIDC_CLIENT_SECRET=D8t8KFH6K127GCPW02PvAlbPc2Fo5zp4
 OIDC_AUTH_URI=http://wiki.test.cn:4430/realms/master/protocol/openid-connect/auth
 OIDC_TOKEN_URI=http://wiki.test.cn:4430/realms/master/protocol/openid-connect/token
 OIDC_USERINFO_URI=http://wiki.test.cn:4430/realms/master/protocol/openid-connect/userinfo
-OIDC_LOGOUT_URI=https://wiki.test.cn:4430/realms/master/protocol/openid-connect/logout?redirect_uri=https%3A%2F%2Fwiki.test.cn%2F
+OIDC_LOGOUT_URI=http://wiki.test.cn:4430/realms/master/protocol/openid-connect/logout?redirect_uri=http%3A%2F%2Fwiki.test.cn%2F
 OIDC_DISABLE_REDIRECT=true
 OIDC_DISPLAY_NAME=OpenID
 OIDC_USERNAME_CLAIM=preferred_username
@@ -270,14 +270,14 @@ networks:
 
 昨天发现的outline 0.75.1版本新增支持OIDC_LOGOUT_URI参数
 
-在`.env`文件添加参数 `OIDC_LOGOUT_URI=https://wiki.test.cn:4430/realms/admin/protocol/openid-connect/logout?redirect_uri=https%3A%2F%2Fwiki.test.cn%2F`
+在`.env`文件添加参数 `OIDC_LOGOUT_URI=http://wiki.test.cn:4430/realms/admin/protocol/openid-connect/logout?redirect_uri=http%3A%2F%2Fwiki.test.cn%2F`
 
 同时调整 keycloak 的docker compose文件，command部分添加参数`--spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true`
 
 修改后如下
 
 ```
-command: start --spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true  --proxy edge  --hostname=wiki.test.cn --hostname-port=4430 --hostname-strict-backchannel=true --hostname-admin-url=https://wiki.test.cn:4430/
+command: start --spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true  --proxy edge  --hostname=wiki.test.cn --hostname-port=4430 --hostname-strict-backchannel=true --hostname-admin-url=http://wiki.test.cn:4430/
 ```
 
 
