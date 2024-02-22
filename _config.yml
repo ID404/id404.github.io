@@ -127,6 +127,15 @@ plugins:
     - jekyll-paginate
     - jekyll-sitemap
     - jekyll-feed
+    - jekyll-seo-tag
+    - jekyll-coffeescript
+    - jekyll-commonmark-ghpages
+    - jekyll-relative-links
+    - jekyll-gist
+    - jekyll-optional-front-matter
+    - jekyll-readme-index
+    - jekyll-default-layout
+    - jekyll-titles-from-headings
     - jemoji
 #     - jekyll-mentions
 collections:
