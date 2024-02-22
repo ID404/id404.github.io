@@ -40,7 +40,7 @@ services:
 
   keycloak:
       container_name: keycloak
-      image: quay.io/keycloak/keycloak:latest
+      image: quay.io/keycloak/keycloak:23.0
       restart: always
       environment:
         KC_DB: postgres
@@ -143,6 +143,10 @@ FILE_STORAGE_LOCAL_ROOT_DIR=/var/lib/outline/data
 
 # Maximum allowed size for the uploaded attachment.
 FILE_STORAGE_UPLOAD_MAX_SIZE=26214400
+FILE_STORAGE_IMPORT_MAX_SIZE=26214400
+FILE_STORAGE_WORKSPACE_IMPORT_MAX_SIZ6=26214400
+MAXIMUM_IMPORT_SIZE=26214400
+
 
 PGSSLMODE=disable
 #ALLOWED_DOMAINS=
@@ -153,6 +157,8 @@ OIDC_CLIENT_SECRET=D8t8KFH6K127GCPW02PvAlbPc2Fo5zp4
 OIDC_AUTH_URI=http://wiki.test.cn:4430/realms/master/protocol/openid-connect/auth
 OIDC_TOKEN_URI=http://wiki.test.cn:4430/realms/master/protocol/openid-connect/token
 OIDC_USERINFO_URI=http://wiki.test.cn:4430/realms/master/protocol/openid-connect/userinfo
+OIDC_LOGOUT_URI=https://wiki.test.cn:4430/realms/master/protocol/openid-connect/logout?logout_redirect_uri=https%3A%2F%2Fwiki.test.cn%2F
+OIDC_DISABLE_REDIRECT=false
 OIDC_DISPLAY_NAME=OpenID
 OIDC_USERNAME_CLAIM=preferred_username
 OIDC_SCOPES=openid profile email
@@ -201,7 +207,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
 
   outline:
-    image: outlinewiki/outline:latest
+    image: outlinewiki/outline:0.75.1
     user: root
     restart: always
     container_name: outline
