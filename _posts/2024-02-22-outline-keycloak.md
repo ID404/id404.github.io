@@ -1,8 +1,8 @@
 ---
 layout: post
-title: docker部署基于keycloak服务认证的outline
+title: 基于keycloak服务认证的outline部署
 keywords: outline, docker, keycloak
-description: docker部署基于keycloak服务认证的outline
+description: 基于keycloak服务认证的outline部署
 categories: outline
 ---
 之前一篇博文介绍到通过outline的部署，全程使用github上[这个](https://github.com/vicalloy/outline-docker-compose)脚本实现，部署过程自动化程度高。但OIDC服务不支持OTP，同时没有会话超时于是决定更换OIDC服务，在原项目上修改比较麻烦本博文介绍如何单独部署keycloak OIDC服务器和outline
