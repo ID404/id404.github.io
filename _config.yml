@@ -137,6 +137,7 @@ plugins:
     - jekyll-default-layout
     - jekyll-titles-from-headings
     - jemoji
+    - faraday-retry
 #     - jekyll-mentions
 collections:
     wiki:
