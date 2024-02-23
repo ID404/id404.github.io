@@ -11,6 +11,89 @@ categories: linux
 toughradius主页 "https://www.toughradius.net" 
 github地址： https://github.com/talkincode/ToughRADIUS
 
+2024-02-23更新
+
+首先，创建一个名为docker-compose.yml的文件，并将以下内容复制到该文件中：
+
+```
+version: "3"
+services:
+  pgdb:
+    image: timescale/timescaledb:latest-pg14
+    container_name: "pgdb"
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      POSTGRES_DB: toughradius
+      POSTGRES_USER: toughradius
+      POSTGRES_PASSWORD: toughradius
+    volumes:
+      - pgdb-volume:/var/lib/postgresql/data
+    networks:
+      toughradius_network:
+
+  toughradius:
+    depends_on:
+      - 'pgdb'
+    image: talkincode/toughradius:latest
+    container_name: "toughradius"
+    restart: always
+    ports:
+      - "1816:1816"
+      - "1818:1818"
+      - "1819:1819"
+      - "2083:2083"
+      - "1812:1812/udp"
+      - "1813:1813/udp"
+      - "1914:1914/udp"
+    volumes:
+      - toughradius-volume:/var/toughradius
+    environment:
+      - GODEBUG=x509ignoreCN=0
+      - TOUGHRADIUS_SYSTEM_DEBUG=off
+      - TOUGHRADIUS_DB_HOST=pgdb
+      - TOUGHRADIUS_DB_NAME=toughradius
+      - TOUGHRADIUS_DB_USER=toughradius
+      - TOUGHRADIUS_DB_PWD=toughradius
+      - TOUGHRADIUS_RADIUS_DEBUG=off
+      - TOUGHRADIUS_RADIUS_ENABLED=on
+      - TOUGHRADIUS_TR069_WEB_TLS=on
+      - TOUGHRADIUS_LOKI_ENABLE=false
+      - TOUGHRADIUS_LOGGER_MODE=production
+      - TOUGHRADIUS_LOGGER_FILE_ENABLE=true
+    networks:
+      toughradius_network:
+
+networks:
+  toughradius_network:
+
+volumes:
+  pgdb-volume:
+  toughradius-volume:
+```
+
+文件中，我们定义了两个服务：pgdb和toughradius。pgdb是PostgreSQL数据库的服务定义，使用TimescaleDB镜像。toughradius是ToughRADIUS的服务定义，依赖于pgdb服务。
+
+接下来，您可以在包含docker-compose.yml文件的目录中运行以下命令来启动服务：
+
+`docker-compose up -d`
+
+
+该命令将在后台启动所有服务。您可以通过运行docker-compose logs命令来查看服务的日志输出。
+
+如果您遇到无法登录ToughRADIUS管理后台的问题，请尝试重启ToughRADIUS服务，或者进入容器内部手动初始化数据库：
+
+`docker exec -it toughradius toughradius -initdb`
+
+
+用户名admin
+密码toughradius
+
+
+---
+
+
+
 <p>首先安装好docker和docker compose</p>
 <p>&nbsp;</p>
 <p>新建好tradiusdata目录</p>
