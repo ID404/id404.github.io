@@ -25,7 +25,7 @@ ca-cert = /opt/certs/ca_cert/ca-cert.pem
 #证书用户识别
 cert-user-oid = 2.5.4.3
 
-#证书用户组识别，这个需要注释掉，否则证书认证不成功
+#证书用户组识别，这个需要注释掉，否则思科客户端证书认证不成功
 #cert-group-oid = 2.5.4.11
 
 #兼容思科anyconnect 客户端
@@ -219,7 +219,7 @@ ca-cert = /opt/certs/ca_cert/ca-cert.pem
 #证书用户识别
 cert-user-oid = 2.5.4.3
 
-#证书用户组识别
+#证书用户组识别，这个需要注释掉，否则思科客户端证书认证不成功
 cert-group-oid = 2.5.4.11
 
 #兼容思科anyconnect 客户端
