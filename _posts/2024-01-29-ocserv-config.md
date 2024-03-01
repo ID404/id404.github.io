@@ -9,6 +9,7 @@ categories: linux, ocserv
 记录一些ocserv容易踩坑的配置
 
 # 1、证书认证
+修改ocserv.conf
 
 ```conf
 #只启用证书认证
@@ -29,6 +30,7 @@ cert-user-oid = 2.5.4.3
 
 #兼容思科anyconnect 客户端
 cisco-client-compat = true
+
 ```
 
 以上为只启用证书认证的配置，若优先用户为密码认证，备用证书认证，则
@@ -194,6 +196,67 @@ do
     esac
 done
 
+```
+
+## 1.3 证书认证分组配置
+若需要证书认证的同时用户能够根据不同的用户组分配权限.
+
+生成的用户证书需要配置OU属性，服务器根据OU判断用户组
+
+同时修改ocserv.conf
+
+```
+#只启用证书认证
+auth = "certificate"
+
+#服务器ssl证书
+server-cert = /opt/certs/server_cert/ssl-cert.pem
+server-key = /opt/certs/server_cert/ssl-key.pem
+
+#CA根证书
+ca-cert = /opt/certs/ca_cert/ca-cert.pem
+
+#证书用户识别
+cert-user-oid = 2.5.4.3
+
+#证书用户组识别
+cert-group-oid = 2.5.4.11
+
+#兼容思科anyconnect 客户端
+cisco-client-compat = true
+
+config-per-group = /etc/ocserv/group/
+#default-group-config = /etc/ocserv/group/users
+#default-select-group = users
+auto-select-group = true
+```
+### 1.3.1 用户组权限
+配置三个用户组 user1 、 user2 、admin
+
+在/etc/ocserv/group分别建立三个文件 user1 、user2 、 admin
+
+user1:
+(DNS隧道分离)
+```
+dns =223.5.5.5
+dns =114.114.114.114
+split-dns = wiki.test.cn
+route = 10.0.1.0/255.255.255.0
+```
+
+user2:
+(限制指定端口)
+```
+dns =223.5.5.5
+route = 10.0.0.2/255.255.255.255
+route = 10.0.0.1/255.255.255.255
+restrict-user-to-ports = "tcp(8080), tcp(445), tcp(80), udp(443), sctp(99), tcp(583), icmp(), icmpv6()"
+```
+
+admin:
+(所有流量都走VPN)
+```
+dns=223.5.5.5
 ```
 
 
