@@ -13,9 +13,9 @@ categories: vmware
 
 # 首先获取访问API接口的令牌
 ```bash
-curl -s -k -X POST "https://<vcenter-ip>/rest/com/vmware/cis/session" -u <username>:<password> 
+curl -s -k -X POST "https://$vcenter-ip/rest/com/vmware/cis/session" -u $username:$password 
 ```
-分别替换\<vcenter-ip>为vcenter的ip; \<username>为vcenter 的用户名 \<password>为vcenter 的密码
+分别替换$vcenter-ip为vcenter的ip; $username为vcenter 的用户名 $password为vcenter 的密码
 
 注意curl 的方法为 **POST**
 
@@ -28,10 +28,10 @@ curl -s -k -X POST "https://<vcenter-ip>/rest/com/vmware/cis/session" -u <userna
 
 # 通过令牌获取需要操作的vm的vm id
 ```bash
-curl -s -k -X GET "https://<vcenter-ip>/rest/vcenter/vm" -H "vmware-api-session-id: <your-session-id>"  | jq
+curl -s -k -X GET "https://$vcenter-ip/rest/vcenter/vm" -H "vmware-api-session-id: $your-session-id"  | jq
 ```
 
-分别替换\<vcenter-ip>为vcenter的ip; \<your-session-id>为上一步获取到的令牌
+分别替换$vcenter-ip为vcenter的ip; $your-session-id为上一步获取到的令牌
 
 注意curl 的方法为 **GET**
 
@@ -44,7 +44,7 @@ curl -s -k -X GET "https://<vcenter-ip>/rest/vcenter/vm" -H "vmware-api-session-
 
 可以安装jq工具进行格式化，安装jq后执行(其实就是比上一步多输入 |  jq )：
 ```
-curl -s -k -X GET "https://<vcenter-ip>/rest/vcenter/vm" -H "vmware-api-session-id: <your-session-id>"  | jq
+curl -s -k -X GET "https://$vcenter-ip/rest/vcenter/vm" -H "vmware-api-session-id: $your-session-id"  | jq
 ```
 输出结果为：
 
@@ -64,7 +64,7 @@ curl -s -k -X GET "https://<vcenter-ip>/rest/vcenter/vm" -H "vmware-api-session-
 其中name为vm的名字，vm为vm id
 当然也可以利用jq 通过vm名过滤出vm id,例如要过滤出名字为PA-VM-11的虚拟机的vm id 则执行
 ```
-curl -s -k -X GET "https://<vcenter-ip>/rest/vcenter/vm" -H "vmware-api-session-id: <your-session-id>"  | jq -r '.value[] | select(.name=="PA-VM-11") | .vm
+curl -s -k -X GET "https://$vcenter-ip/rest/vcenter/vm" -H "vmware-api-session-id: $your-session-id"  | jq -r '.value[] | select(.name=="PA-VM-11") | .vm
 ```
 
 # 操作虚拟机
@@ -72,26 +72,26 @@ curl -s -k -X GET "https://<vcenter-ip>/rest/vcenter/vm" -H "vmware-api-session-
 此时令牌、vm id都获取后可进行虚拟机的操作
 ## 获取当前虚拟机完整信息
 ```
-curl -s -k -X GET "https://<vcenter-ip>/rest/vcenter/vm/<vm-d>/" -H "vmware-api-session-id: <your-session-id>"
+curl -s -k -X GET "https://$vcenter-ip/rest/vcenter/vm/$vm-id/" -H "vmware-api-session-id: $your-session-id"
 ```
 注意curl 的方法为 **GET**
 
 ## 获取当前虚拟机电源状态
 只需要在vm id 后面加power字样
 ```
-curl -s -k -X GET "https://<vcenter-ip>/rest/vcenter/vm/<vm-d>/power" -H "vmware-api-session-id: <your-session-id>"
+curl -s -k -X GET "https://$vcenter-ip/rest/vcenter/vm/$vm-id/power" -H "vmware-api-session-id: $your-session-id"
 ```
 注意curl 的方法为 **GET**
 
 ## 执行开机操作
 ```
-curl -s -k -X POST "https://<vcenter-ip>/rest/vcenter/vm/<vm-id>/power/start" -H "vmware-api-session-id: <your-session-id>" 
+curl -s -k -X POST "https://$vcenter-ip/rest/vcenter/vm/$vm-id/power/start" -H "vmware-api-session-id: $your-session-id" 
 ```
 注意curl 的方法为 **POST**
 
 ## 执行关机操作
 ```
-curl -s -k -X POST "https://<vcenter-ip>/rest/vcenter/vm/<vm-id>/power/stop" -H "vmware-api-session-id: <your-session-id>" 
+curl -s -k -X POST "https://$vcenter-ip/rest/vcenter/vm/$vm-id/power/stop" -H "vmware-api-session-id: $your-session-id" 
 ```
 注意curl 的方法为 **POST**
 
