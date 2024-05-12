@@ -49,4 +49,6 @@ categories: checkpoint
 
 将刚才复制的文本粘贴至第一行中，下面IP等内容会自动填充，最后点击OK即可
 
+![finish](/images/blog/checkpoint_license/checkpoint_license_9.png)
+
 ![finish](/images/blog/checkpoint_license/checkpoint_license_10.png)
